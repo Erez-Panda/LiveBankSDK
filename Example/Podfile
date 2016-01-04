@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'LiveSignSDK_Example', :exclusive => true do
+  pod "LiveSignSDK", :path => "../"
+end
+
+target 'LiveSignSDK_Tests', :exclusive => true do
+  pod "LiveSignSDK", :path => "../"
+
+  
+end
