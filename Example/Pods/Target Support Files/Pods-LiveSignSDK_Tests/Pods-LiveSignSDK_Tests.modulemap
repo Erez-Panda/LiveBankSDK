@@ -1,0 +1,6 @@
+framework module Pods_LiveSignSDK_Tests {
+  umbrella header "Pods-LiveSignSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

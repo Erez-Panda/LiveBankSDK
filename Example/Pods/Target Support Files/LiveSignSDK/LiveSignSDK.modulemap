@@ -1,0 +1,6 @@
+framework module LiveSignSDK {
+  umbrella header "LiveSignSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

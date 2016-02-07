@@ -10,7 +10,7 @@ import Foundation
 
 class SignColors {
     
-    static let sharedInstance = Colors()
+    static let sharedInstance = SignColors()
     
     init(){
         

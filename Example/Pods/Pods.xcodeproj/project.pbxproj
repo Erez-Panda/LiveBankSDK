@@ -1,0 +1,1500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E1B99C7B6C6B5D4330DE7FDF90201CD /* LiveSignSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 532766BB42D3C6AF1AFFC9FE39F15A1A /* LiveSignSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F7C38BEA5AFA3A7E1FA70B0532CC4A5 /* NIKFontAwesomeIconFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A34645E94B197B9F31577B46AED8 /* NIKFontAwesomeIconFactory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1480F4923DBBF217F60572EEECB4027C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E1F265D5E354398342BD8D20B08C13AD /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		174202BD6AE0E4A41F5CE66E975EAE52 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1D6620B7CB8E9628C02CC969D09A70 /* UIRefreshControl+AFNetworking.m */; };
+		17AAD6DFAA142121C81AF913C2121663 /* NIKFontAwesomePathRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1B6737CF36746E525BB3383632D56 /* NIKFontAwesomePathRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17E1E318776CB752042BE59D8E65BF56 /* FontAwesomeIconFactory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41881698651DFE01D1960D67E4408D75 /* FontAwesomeIconFactory-dummy.m */; };
+		1936562C06648208F5C16FF400260E32 /* LiveSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DF13E988FE055752A07B1F2EB01B8DEE /* LiveSignSDK.bundle */; };
+		1DD5E3BF38211F744FB784FC106AE0D9 /* SignColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC7CEE950CCC28B4FB000DE5D709B /* SignColors.swift */; };
+		1E5B8F12ED7CC40ECDB9B1F755F387E5 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5325DE89D166EC47A158F206EE946AF6 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20607BE2B1E5F31765026E5AC64DB27D /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E194A460F62FD4F64CECA59DE44F3CD /* AFSecurityPolicy.m */; };
+		20EE8030FCF2402DAC7F1C9B9DDAEF79 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 94ABA9BC6639E2D0961DC6BDF11C5C2D /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27424AB4058BD73B64047009C964E095 /* DocumentView.xib in Sources */ = {isa = PBXBuildFile; fileRef = D2B2C58B33AA08609315C9D9D85C6D83 /* DocumentView.xib */; };
+		2E8A32ED46194EDBE22146271F6D26DE /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5164BDBDDCAAFFE9FF343E60E445C0 /* UIImageView+AFNetworking.m */; };
+		38E39CE4DADF5B1F3F091DA62EAF9BB7 /* ControlPanelView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 76D04B18D70D6327C5EEAFAFD4BE49E7 /* ControlPanelView.xib */; };
+		3A10EF6ABF51D1D00B06AC5EF3A8C28C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915B5F168698251555101B63AE19324B /* SystemConfiguration.framework */; };
+		3B36248CD32BFFF00109D96E0CEF6395 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D730E38C4F4B01967400EDC1379289 /* DocumentView.swift */; };
+		3CB70BBFADF19884D3969FC6A0C17FED /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6EBDFDBFAE50242313FBC80C136AC4 /* AFNetworking.framework */; };
+		3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33011CB72889ABBCF248308EF1BACFA /* AFNetworking-dummy.m */; };
+		3F1BC9BAFFEEABB1ABC7614DF0FC97D5 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A94FFF7D56EA6CAED102449AE51390 /* AFAutoPurgingImageCache.m */; };
+		48AF1B5CDE30A47515B5C6DFC3E25313 /* RemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41CF349E02D2BE195409E6E4FF9B39 /* RemoteAPI.swift */; };
+		4A41CC2B1186F23590F9045C34BB10FF /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D30FB6140F1CB51C36E0D688D02485A /* FontAwesome.otf */; };
+		50BD341A15ECC2B66B8FBA5184855688 /* NIKFontAwesomeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD96E4B94D50320351F5D4BA0A44DE /* NIKFontAwesomeImageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		549BB442AF7F90B5B941592114C1B5F2 /* Pods-LiveSignSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE36DEA5E4C4B196765CF07B47EB8241 /* Pods-LiveSignSDK_Example-dummy.m */; };
+		560698A4D707DCBCC1C8F98BC9B89B23 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C7312ADBA86B7F03A2CD40A584B759 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5808B477EFF509D810B5CDCFDC944F80 /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C4EAC5B82BC4D443D595B68576A13A /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF6453E55785669885F626B853FD2AA /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 498FEC7F6751EF1004786EAA0D587359 /* UIProgressView+AFNetworking.m */; };
+		60E3009342BEE96D32C546BE2DB60052 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A86E9DD2A6C519A59FC5D92A8B1F71D /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		659960F7E28E993E08CCC1E8A383E710 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2000DC36B0E9E753BD5684A45F5EB8F6 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68152D921ABF6A423C192C04FDF94F0F /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D427F72B4AF5AF8DD4156E62DC3DC88 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68A38977EBAE334DC3C22386D00D2622 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 388BCEEC93A5080CF8B020137FF5D510 /* AFNetworkReachabilityManager.m */; };
+		6ED4ABEE8A5F51F5ECB59FA1781D29C6 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8343AC86E36FC2EB6F90267E33BA1C24 /* UIActivityIndicatorView+AFNetworking.m */; };
+		707B1A7541C8DBDDE8C27896A61370BE /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AD30F8D9E3232D1995A626A5AF1F65 /* AFURLSessionManager.m */; };
+		71F25F23570741D032394BE3377D125C /* NIKFontAwesomeIconFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A8AC5630565E094958DA14B603B115 /* NIKFontAwesomeIconFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7332F15718920917F544F35CE2C038AA /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC260DF3F55519A24B78D67FD306371 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7341FAC6279FC043B2569701183647D9 /* NIKFontAwesomeImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F22AE6849AB63191E27995C7CF5B25 /* NIKFontAwesomeImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E6A4EFA32969CDB9F9C57903152BA54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2020AAF83A319C731918C2E93231FED8 /* CoreGraphics.framework */; };
+		7F17EA5E2787B6F2BBB359854B42A0E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */; };
+		81B617F8D26BB10C5726D75E85D21EB7 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6FED5C811422A6860430FEC9842635 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81F63FD4CC78AA3DBE4F2FDF2FE03F98 /* PassiveLinearInterpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED37BCED0524DBB763D1BD6ADCA1243 /* PassiveLinearInterpView.swift */; };
+		8A145C65F21A4C26C887C5A565F2C35C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823BE3E2852733AAB5344091324AE98 /* Session.swift */; };
+		8A65011A78BA894ECE80B4548C5C9560 /* SignatureTrainingView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 02F8E30075DA2C71D3D65151F1D8F1EB /* SignatureTrainingView.xib */; };
+		9E1E90DED74B73ECE53C9AD76DE53E2D /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B6210C4F90CAE7DDFC3BB7B595FD2335 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E5EB67C62C652CF27E85B6C0A4395A1 /* NIKFontAwesomeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FFEE042CA664A84D16AA0338935114E7 /* NIKFontAwesomeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F17461E35B1B4FEA52916DC83984BCA /* SignDocumentPanelView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE7142B0980F73489772470A18449D /* SignDocumentPanelView.xib */; };
+		A0DA15462516E966CBC09280F43F961D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CE8AD2B4B8D0B9A14BCE591CE33FC0 /* CoreText.framework */; };
+		A462945883F7729B185B64B679A6BFBE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FAEF9B89F137CABCB127C3AAB5E2E8 /* UIWebView+AFNetworking.m */; };
+		A6C6019D45BE62C61210A9CC619368EF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A68C8024B6BB6E3ADBADAF8F275F /* AFNetworkActivityIndicatorManager.m */; };
+		AB2964CE47E0057C3A7A2AA14C5354CC /* Pods-LiveSignSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84361DB289B3EE9581E5905F9157DAF8 /* Pods-LiveSignSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB39AC9746E7575D7449700475E41B0B /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E08E4328F25C6AF95C2BDB47BEF4A5 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE2A07407FB50BA249984DC0620E84C0 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C15877C5CC1C816E413391E98EE2592 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF03C11A1FAC8132AD3749D8F541701A /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7664801206C46B1C54A018E4FECB1 /* UIButton+AFNetworking.m */; };
+		AFCC69B94CDBA344371A1CE3B178EBA5 /* NIKFontAwesomePathFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 488AA3DEDBBE6B38AEB7B84DDBE53EDE /* NIKFontAwesomePathFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3F4E355F0597EBDFA1B460F74C95643 /* NIKFontAwesomeIconFactory+iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C076A1DAB11427D2F09CD1CDC8B67305 /* NIKFontAwesomeIconFactory+iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4990EFC059513016DF4E9A8DFE4430A /* LiveSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052782FBC1CEF0F979F14BFEA46C280 /* LiveSign.swift */; };
+		B5852322ADE88AAD56EE042B80BA81E4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C069247B02808FAD12F61CA80ABC4534 /* AFURLResponseSerialization.m */; };
+		BA4C7EC9A37D7172D8D230986DA4F9D2 /* NIKFontAwesomePathFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB413F6D2EF851BDF7A0DB691DF885 /* NIKFontAwesomePathFactory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BC471409A05A3CF81F68F038705DF92B /* NIKFontAwesomeIconTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 66B5BC1D7DE0BF8AD56771D56A87EAD9 /* NIKFontAwesomeIconTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCB21E4F2D87C6A8432F1D9F28B40749 /* NIKFontAwesomeIconTraits.h in Headers */ = {isa = PBXBuildFile; fileRef = 7566E1C8285883424B66C9AB1093B527 /* NIKFontAwesomeIconTraits.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCFA4EA86289830BEC5B14B88E43F98B /* SignatureTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F3D4E2A53BA6FB8745C5019EF4C02 /* SignatureTrainingView.swift */; };
+		C010484A2D4CCC972FE6D69D3DCC3775 /* FontAwesomeIconFactory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 204BA0897EA1C48E9DFFC77ACFDB7B1B /* FontAwesomeIconFactory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C01AC3BAD9037A8A1E45FD17336C15F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044F40FE442816C2385F5E038C7F3722 /* Security.framework */; };
+		C163BB1FD95CE91AC41A9B09DF65B4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */; };
+		C2DD28375E1F0B1D0D1D2E4E607C499F /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9F79F5D6F7FDCE55B5F37E96161B57 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6354FEC7728A4C86DAD8092509BA7D4 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = DA79DB0C2538E43C0DF7A05ADC2A5D9D /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9FBB9F6A131EE623422E722E61EC81B /* NIKFontAwesomeTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AECEAF12276BFB87B65A6ABF38429509 /* NIKFontAwesomeTabBarItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CA928CEA3F5DCD6D1F0D4F6E09DE5971 /* FontAwesomeIconFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C92127931036DFE0A1E9171471CDBE /* FontAwesomeIconFactory.framework */; };
+		CAC483EF637FB4A2C2E2FC75BA631B87 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 286B8BC245F505378FAC593DF570EF67 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB3DF843380642E7E4813A7C7E3D3180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */; };
+		CFA8D6B529A0EBFF0316F2629AB2556E /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1A850AB7C4D2CC049498949207D7B2 /* AFImageDownloader.m */; };
+		D04B84B53456B9CD8A7236126075571B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC4F9BAF9B362BC3B3F98060111027A /* MobileCoreServices.framework */; };
+		D0757F905D8B2B6AA0EEDAFB1882B0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */; };
+		D08FA788CE05180C1815C249FAF8D58D /* NIKFontAwesomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D2DD0C87B7A78D017A153E33616AE8 /* NIKFontAwesomeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D237F1ABE076691D5D79751C2A7BB1F5 /* NIKFontAwesomeIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 04310EE1C04EFC6656AABCBFE666B54A /* NIKFontAwesomeIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6A5C42EAD3F71ED12131A0F0A2DCE09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2020AAF83A319C731918C2E93231FED8 /* CoreGraphics.framework */; };
+		D9F4E833E37B611B432F6B5D7072DDA2 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E316CB271E369ACCB48C923E817935 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB4AABD23180C2AFA25ACA3F36B92298 /* LinearInterpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848517DE3F1038DAD79622A308344E92 /* LinearInterpView.swift */; };
+		DD37ADB72FC19D10E0BDF6AFD1CCA181 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D57738A49571766645BBD20E17FF8 /* ControlPanelView.swift */; };
+		DFFA215EEAA8DDBD540076927535275C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD5DDA7B4631F8A0A08563C3291692 /* AFURLRequestSerialization.m */; };
+		E0D4045AC4C1B41917FCA23A042D18B2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3178BA4F74C0613DACFDFCD89717AFE6 /* AFHTTPSessionManager.m */; };
+		E5066FEC09C21B7A960B1F50F5454C58 /* NIKFontAwesomePathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2C3B1176DEA718D277630EAB7DAF /* NIKFontAwesomePathRenderer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E7988678C81F7CCB95D239375FC6986D /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D316D96476DA93754F8493D35F9A2E /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC7CADE416A78A1CD6936018A6695126 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B80876C01D29494035893AB32A3291F /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F09A317B5759F3027F88DB6BF0C454BE /* Pods-LiveSignSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B344210D1331F82730F67F8D9927AF /* Pods-LiveSignSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0E0938442D2739760665159F6EDF9B3 /* SignDocumentPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D296D6E3393F1FBE5FE0EE0EDEAE2 /* SignDocumentPanelView.swift */; };
+		F1D41227B7D64A47C8132958268C68DD /* LiveSignSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A83785CB7850871CB4B6BC4C6DF07D33 /* LiveSignSDK-dummy.m */; };
+		F36244D7BF024A8AE959380EC783ABD0 /* FontAwesomeIconFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7196475106010BE79609318C7E9BC786 /* FontAwesomeIconFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F443BBD5842B18086635CE4CE81F9FD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */; };
+		F4E42CD7D6A7BD4AEFD284C3193DB40F /* Pods-LiveSignSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B925DD3F68BB3405F2C407EDFE9898 /* Pods-LiveSignSDK_Tests-dummy.m */; };
+		F935A078D5D45E0C4C678154ABBA4796 /* NIKFontAwesomeIconFactory+OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DEC6164F603BD34F963DABA5DCC03E /* NIKFontAwesomeIconFactory+OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAC8107675A5AFE0EAB09E43182B3D1D /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7864BF113458B7805BAE6BC24EE526A /* Socket.swift */; };
+		FC2A20FD29E4D3A751E9B8A180459FA8 /* NIKFontAwesomeTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7F56C436D8211D50EF4F9C517900E4 /* NIKFontAwesomeTabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BD51A6FCFA2AD28C86619C6B27B4942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C3436CEA5C3D39764C5F54374794ECB;
+			remoteInfo = AFNetworking;
+		};
+		27AFC767ACF3605A3EE4BB59B9E30C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62DFDFEC93EAE1FFCC10BB2D79FB1AAB;
+			remoteInfo = "LiveSignSDK-LiveSignSDK";
+		};
+		96E59E378EF78F969EC83BB8AFE2E2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1967A1B7BD24B96811D1E776757119B;
+			remoteInfo = FontAwesomeIconFactory;
+		};
+		99296BE78EE3FB9717DE17E3B108DFC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1967A1B7BD24B96811D1E776757119B;
+			remoteInfo = FontAwesomeIconFactory;
+		};
+		B171CDA1D44C2269F7FE3AFCF9D089E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C3436CEA5C3D39764C5F54374794ECB;
+			remoteInfo = AFNetworking;
+		};
+		B8A6E62A493C8227A0D2C26A1571AE1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1967A1B7BD24B96811D1E776757119B;
+			remoteInfo = FontAwesomeIconFactory;
+		};
+		C6495579DDB4C08874FD8999679362E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3D1ED164DDB4D65567E25AFEC9D6A6C;
+			remoteInfo = LiveSignSDK;
+		};
+		C6AF3E7FF26FBC67B59962012166C388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3D1ED164DDB4D65567E25AFEC9D6A6C;
+			remoteInfo = LiveSignSDK;
+		};
+		CBB486ED344A84A76E95E68EF7DB68AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C3436CEA5C3D39764C5F54374794ECB;
+			remoteInfo = AFNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02F8E30075DA2C71D3D65151F1D8F1EB /* SignatureTrainingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SignatureTrainingView.xib; sourceTree = "<group>"; };
+		04310EE1C04EFC6656AABCBFE666B54A /* NIKFontAwesomeIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeIcon.h; path = FontAwesomeIconFactory/NIKFontAwesomeIcon.h; sourceTree = "<group>"; };
+		044F40FE442816C2385F5E038C7F3722 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		0823BE3E2852733AAB5344091324AE98 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		09C0BECE8160BEB0C1AA562FBD766F2A /* Pods_LiveSignSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveSignSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBD96E4B94D50320351F5D4BA0A44DE /* NIKFontAwesomeImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomeImageView.m; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeImageView.m; sourceTree = "<group>"; };
+		0E194A460F62FD4F64CECA59DE44F3CD /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		16C1C215E995FF0A1A1473F3025B748E /* Pods-LiveSignSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LiveSignSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1ABC6316FBDBF829D6019A230E2BF9BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B6FED5C811422A6860430FEC9842635 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		1CADB8A28C155BB19C3F98813FCDB53D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CBE7142B0980F73489772470A18449D /* SignDocumentPanelView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SignDocumentPanelView.xib; sourceTree = "<group>"; };
+		2000DC36B0E9E753BD5684A45F5EB8F6 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		2020AAF83A319C731918C2E93231FED8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		204BA0897EA1C48E9DFFC77ACFDB7B1B /* FontAwesomeIconFactory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeIconFactory-umbrella.h"; sourceTree = "<group>"; };
+		286B8BC245F505378FAC593DF570EF67 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		2B80876C01D29494035893AB32A3291F /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		2FDB413F6D2EF851BDF7A0DB691DF885 /* NIKFontAwesomePathFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomePathFactory.m; path = FontAwesomeIconFactory/NIKFontAwesomePathFactory.m; sourceTree = "<group>"; };
+		3178BA4F74C0613DACFDFCD89717AFE6 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		388BCEEC93A5080CF8B020137FF5D510 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		3A7F56C436D8211D50EF4F9C517900E4 /* NIKFontAwesomeTabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeTabBarItem.h; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeTabBarItem.h; sourceTree = "<group>"; };
+		3D41CF349E02D2BE195409E6E4FF9B39 /* RemoteAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteAPI.swift; sourceTree = "<group>"; };
+		3F09C1120F316FAAC3F13CB5CF3967F1 /* Pods-LiveSignSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveSignSDK_Example-resources.sh"; sourceTree = "<group>"; };
+		412D296D6E3393F1FBE5FE0EE0EDEAE2 /* SignDocumentPanelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SignDocumentPanelView.swift; sourceTree = "<group>"; };
+		41881698651DFE01D1960D67E4408D75 /* FontAwesomeIconFactory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesomeIconFactory-dummy.m"; sourceTree = "<group>"; };
+		44E0B7061F256C21CDF45E1F7CF2CDC1 /* Pods-LiveSignSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveSignSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		488AA3DEDBBE6B38AEB7B84DDBE53EDE /* NIKFontAwesomePathFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomePathFactory.h; path = FontAwesomeIconFactory/NIKFontAwesomePathFactory.h; sourceTree = "<group>"; };
+		48D316D96476DA93754F8493D35F9A2E /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		48D730E38C4F4B01967400EDC1379289 /* DocumentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		48DEC6164F603BD34F963DABA5DCC03E /* NIKFontAwesomeIconFactory+OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NIKFontAwesomeIconFactory+OSX.h"; path = "FontAwesomeIconFactory/NIKFontAwesomeIconFactory+OSX.h"; sourceTree = "<group>"; };
+		498FEC7F6751EF1004786EAA0D587359 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		51DDC7CEE950CCC28B4FB000DE5D709B /* SignColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SignColors.swift; sourceTree = "<group>"; };
+		5296B96587BE742AEE97C7CFB57AF160 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5325DE89D166EC47A158F206EE946AF6 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		532766BB42D3C6AF1AFFC9FE39F15A1A /* LiveSignSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LiveSignSDK-umbrella.h"; sourceTree = "<group>"; };
+		5447B86A7033DF00A97C6D6BB5F573C0 /* Pods-LiveSignSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LiveSignSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56ABE1DF69261ABDF859E2D2C8ECE957 /* Pods-LiveSignSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveSignSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		5A86E9DD2A6C519A59FC5D92A8B1F71D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		5B3F3D4E2A53BA6FB8745C5019EF4C02 /* SignatureTrainingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SignatureTrainingView.swift; sourceTree = "<group>"; };
+		5C4D57738A49571766645BBD20E17FF8 /* ControlPanelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		5F87A34645E94B197B9F31577B46AED8 /* NIKFontAwesomeIconFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomeIconFactory.m; path = FontAwesomeIconFactory/NIKFontAwesomeIconFactory.m; sourceTree = "<group>"; };
+		6318FC5458CEDE081246FD96AC7A1C05 /* Pods-LiveSignSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveSignSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		66B5BC1D7DE0BF8AD56771D56A87EAD9 /* NIKFontAwesomeIconTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeIconTypes.h; path = FontAwesomeIconFactory/NIKFontAwesomeIconTypes.h; sourceTree = "<group>"; };
+		67A8AC5630565E094958DA14B603B115 /* NIKFontAwesomeIconFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeIconFactory.h; path = FontAwesomeIconFactory/NIKFontAwesomeIconFactory.h; sourceTree = "<group>"; };
+		6A042161B3ABE7DFD920BB40155E37B5 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1CCC6C940FA9BF0A1EE006757F1A83 /* Pods-LiveSignSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveSignSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7196475106010BE79609318C7E9BC786 /* FontAwesomeIconFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeIconFactory.h; path = FontAwesomeIconFactory/FontAwesomeIconFactory.h; sourceTree = "<group>"; };
+		74C9170431D34CE05349964471FD0605 /* FontAwesomeIconFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesomeIconFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7566E1C8285883424B66C9AB1093B527 /* NIKFontAwesomeIconTraits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeIconTraits.h; path = FontAwesomeIconFactory/NIKFontAwesomeIconTraits.h; sourceTree = "<group>"; };
+		76D04B18D70D6327C5EEAFAFD4BE49E7 /* ControlPanelView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ControlPanelView.xib; sourceTree = "<group>"; };
+		78C7312ADBA86B7F03A2CD40A584B759 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		78FEA46C1302D5947A7EDE1DDC19214F /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
+		7A9F79F5D6F7FDCE55B5F37E96161B57 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		7ACDD62DDA08F60F93BA665E73241597 /* Pods_LiveSignSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveSignSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		806286F396A92A34D2F6DF40BD0257D4 /* LiveSignSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LiveSignSDK.modulemap; sourceTree = "<group>"; };
+		8343AC86E36FC2EB6F90267E33BA1C24 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		84361DB289B3EE9581E5905F9157DAF8 /* Pods-LiveSignSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LiveSignSDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		848517DE3F1038DAD79622A308344E92 /* LinearInterpView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinearInterpView.swift; sourceTree = "<group>"; };
+		85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LiveSignSDK.xcconfig; sourceTree = "<group>"; };
+		85CE8AD2B4B8D0B9A14BCE591CE33FC0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		88C4EAC5B82BC4D443D595B68576A13A /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
+		89FB2C3B1176DEA718D277630EAB7DAF /* NIKFontAwesomePathRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomePathRenderer.m; path = FontAwesomeIconFactory/NIKFontAwesomePathRenderer.m; sourceTree = "<group>"; };
+		8D427F72B4AF5AF8DD4156E62DC3DC88 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8E6EBDFDBFAE50242313FBC80C136AC4 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC4F9BAF9B362BC3B3F98060111027A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		915B5F168698251555101B63AE19324B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		91DD6CB98D9CC50586EF0CD49E55173A /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		94ABA9BC6639E2D0961DC6BDF11C5C2D /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		96DD5DDA7B4631F8A0A08563C3291692 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		98B344210D1331F82730F67F8D9927AF /* Pods-LiveSignSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LiveSignSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9BE77C597A49E11146E042DC55365D7E /* FontAwesomeIconFactory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FontAwesomeIconFactory.modulemap; sourceTree = "<group>"; };
+		9C15877C5CC1C816E413391E98EE2592 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		9D2E20193DECE3DE01609FD07641CD92 /* Pods-LiveSignSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveSignSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9D30FB6140F1CB51C36E0D688D02485A /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = "Font-Awesome/fonts/FontAwesome.otf"; sourceTree = "<group>"; };
+		9FF2A68C8024B6BB6E3ADBADAF8F275F /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		A1C92127931036DFE0A1E9171471CDBE /* FontAwesomeIconFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesomeIconFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A428606245A3FF8FA29569858E19F7BB /* Pods-LiveSignSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LiveSignSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A83785CB7850871CB4B6BC4C6DF07D33 /* LiveSignSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LiveSignSDK-dummy.m"; sourceTree = "<group>"; };
+		AECEAF12276BFB87B65A6ABF38429509 /* NIKFontAwesomeTabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomeTabBarItem.m; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeTabBarItem.m; sourceTree = "<group>"; };
+		AF1D6620B7CB8E9628C02CC969D09A70 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		B052782FBC1CEF0F979F14BFEA46C280 /* LiveSign.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveSign.swift; sourceTree = "<group>"; };
+		B0E08E4328F25C6AF95C2BDB47BEF4A5 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		B6210C4F90CAE7DDFC3BB7B595FD2335 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAB7E3738CE5163A964E93BC832196A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE36DEA5E4C4B196765CF07B47EB8241 /* Pods-LiveSignSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LiveSignSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		BE6193A021C48577C3E7D315F1AF929F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C069247B02808FAD12F61CA80ABC4534 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		C076A1DAB11427D2F09CD1CDC8B67305 /* NIKFontAwesomeIconFactory+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NIKFontAwesomeIconFactory+iOS.h"; path = "FontAwesomeIconFactory/NIKFontAwesomeIconFactory+iOS.h"; sourceTree = "<group>"; };
+		C2AD30F8D9E3232D1995A626A5AF1F65 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		C33011CB72889ABBCF248308EF1BACFA /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		C7276C6529AFFCC81AA4E8AB83FA8572 /* Pods-LiveSignSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LiveSignSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C7864BF113458B7805BAE6BC24EE526A /* Socket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		C7E316CB271E369ACCB48C923E817935 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		C8D2DD0C87B7A78D017A153E33616AE8 /* NIKFontAwesomeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NIKFontAwesomeButton.m; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeButton.m; sourceTree = "<group>"; };
+		C9FAEF9B89F137CABCB127C3AAB5E2E8 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		CD40F3258180A059D684865F190931DD /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		CD8093F22FBACB85C5B4879BABCF2289 /* FontAwesomeIconFactory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesomeIconFactory.xcconfig; sourceTree = "<group>"; };
+		CED37BCED0524DBB763D1BD6ADCA1243 /* PassiveLinearInterpView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PassiveLinearInterpView.swift; sourceTree = "<group>"; };
+		D2B2C58B33AA08609315C9D9D85C6D83 /* DocumentView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
+		D5B925DD3F68BB3405F2C407EDFE9898 /* Pods-LiveSignSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LiveSignSDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		D6F22AE6849AB63191E27995C7CF5B25 /* NIKFontAwesomeImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeImageView.h; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeImageView.h; sourceTree = "<group>"; };
+		DA79DB0C2538E43C0DF7A05ADC2A5D9D /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		DB1A850AB7C4D2CC049498949207D7B2 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		DB598BDEB58CBA26FC3E826DC8D91E9E /* Pods-LiveSignSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LiveSignSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		DCC1B6737CF36746E525BB3383632D56 /* NIKFontAwesomePathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomePathRenderer.h; path = FontAwesomeIconFactory/NIKFontAwesomePathRenderer.h; sourceTree = "<group>"; };
+		DEC260DF3F55519A24B78D67FD306371 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		DF13E988FE055752A07B1F2EB01B8DEE /* LiveSignSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveSignSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01D37AF1898C43FAEF3C4BAE1F785DE /* LiveSignSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LiveSignSDK-prefix.pch"; sourceTree = "<group>"; };
+		E1F265D5E354398342BD8D20B08C13AD /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E7ADAD5C8C83CA69533AA8E39F0B4BAC /* Pods-LiveSignSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveSignSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E9A94FFF7D56EA6CAED102449AE51390 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		EF199B7DE72E34C9BECF5D66C803F333 /* Pods-LiveSignSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LiveSignSDK_Example.modulemap"; sourceTree = "<group>"; };
+		EF712018BE2A3DA1BB67AAB344115408 /* FontAwesomeIconFactory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeIconFactory-prefix.pch"; sourceTree = "<group>"; };
+		F0C8D1F8B8108747F7BCD9CB4A446467 /* LiveSignSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiveSignSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5164BDBDDCAAFFE9FF343E60E445C0 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		FB10C6E202DF6BDB36A57DECEE7AD427 /* Pods-LiveSignSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveSignSDK_Tests-resources.sh"; sourceTree = "<group>"; };
+		FBF7664801206C46B1C54A018E4FECB1 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		FFEE042CA664A84D16AA0338935114E7 /* NIKFontAwesomeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NIKFontAwesomeButton.h; path = FontAwesomeIconFactory/iOS/NIKFontAwesomeButton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6681988F5CAC25B11474DDA0126D3DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3DF843380642E7E4813A7C7E3D3180 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6ECE6A9F6BDBA11FD71323FB4D43E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB70BBFADF19884D3969FC6A0C17FED /* AFNetworking.framework in Frameworks */,
+				CA928CEA3F5DCD6D1F0D4F6E09DE5971 /* FontAwesomeIconFactory.framework in Frameworks */,
+				D0757F905D8B2B6AA0EEDAFB1882B0E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C151364F15F39F7CC60CBF9A3AB49B44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6A4EFA32969CDB9F9C57903152BA54 /* CoreGraphics.framework in Frameworks */,
+				7F17EA5E2787B6F2BBB359854B42A0E3 /* Foundation.framework in Frameworks */,
+				D04B84B53456B9CD8A7236126075571B /* MobileCoreServices.framework in Frameworks */,
+				C01AC3BAD9037A8A1E45FD17336C15F3 /* Security.framework in Frameworks */,
+				3A10EF6ABF51D1D00B06AC5EF3A8C28C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1D6AFDA3C4D7B62F99B163B3B9BDDF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A5C42EAD3F71ED12131A0F0A2DCE09 /* CoreGraphics.framework in Frameworks */,
+				A0DA15462516E966CBC09280F43F961D /* CoreText.framework in Frameworks */,
+				C163BB1FD95CE91AC41A9B09DF65B4D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E870777AD864AB825755667A8AAE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC96A231313AE16C1BD685B6DC4A342 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F443BBD5842B18086635CE4CE81F9FD2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10D03E0330C3832C9234F11E46A816DC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				286B8BC245F505378FAC593DF570EF67 /* AFAutoPurgingImageCache.h */,
+				E9A94FFF7D56EA6CAED102449AE51390 /* AFAutoPurgingImageCache.m */,
+				88C4EAC5B82BC4D443D595B68576A13A /* AFImageDownloader.h */,
+				DB1A850AB7C4D2CC049498949207D7B2 /* AFImageDownloader.m */,
+				E1F265D5E354398342BD8D20B08C13AD /* AFNetworkActivityIndicatorManager.h */,
+				9FF2A68C8024B6BB6E3ADBADAF8F275F /* AFNetworkActivityIndicatorManager.m */,
+				5325DE89D166EC47A158F206EE946AF6 /* UIActivityIndicatorView+AFNetworking.h */,
+				8343AC86E36FC2EB6F90267E33BA1C24 /* UIActivityIndicatorView+AFNetworking.m */,
+				1B6FED5C811422A6860430FEC9842635 /* UIButton+AFNetworking.h */,
+				FBF7664801206C46B1C54A018E4FECB1 /* UIButton+AFNetworking.m */,
+				B6210C4F90CAE7DDFC3BB7B595FD2335 /* UIImage+AFNetworking.h */,
+				5A86E9DD2A6C519A59FC5D92A8B1F71D /* UIImageView+AFNetworking.h */,
+				FA5164BDBDDCAAFFE9FF343E60E445C0 /* UIImageView+AFNetworking.m */,
+				2000DC36B0E9E753BD5684A45F5EB8F6 /* UIKit+AFNetworking.h */,
+				C7E316CB271E369ACCB48C923E817935 /* UIProgressView+AFNetworking.h */,
+				498FEC7F6751EF1004786EAA0D587359 /* UIProgressView+AFNetworking.m */,
+				DA79DB0C2538E43C0DF7A05ADC2A5D9D /* UIRefreshControl+AFNetworking.h */,
+				AF1D6620B7CB8E9628C02CC969D09A70 /* UIRefreshControl+AFNetworking.m */,
+				9C15877C5CC1C816E413391E98EE2592 /* UIWebView+AFNetworking.h */,
+				C9FAEF9B89F137CABCB127C3AAB5E2E8 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		120ADEDD9D1A30248CE2595F65AA4206 /* FontAwesomeIconFactory */ = {
+			isa = PBXGroup;
+			children = (
+				7196475106010BE79609318C7E9BC786 /* FontAwesomeIconFactory.h */,
+				FFEE042CA664A84D16AA0338935114E7 /* NIKFontAwesomeButton.h */,
+				C8D2DD0C87B7A78D017A153E33616AE8 /* NIKFontAwesomeButton.m */,
+				04310EE1C04EFC6656AABCBFE666B54A /* NIKFontAwesomeIcon.h */,
+				67A8AC5630565E094958DA14B603B115 /* NIKFontAwesomeIconFactory.h */,
+				5F87A34645E94B197B9F31577B46AED8 /* NIKFontAwesomeIconFactory.m */,
+				C076A1DAB11427D2F09CD1CDC8B67305 /* NIKFontAwesomeIconFactory+iOS.h */,
+				48DEC6164F603BD34F963DABA5DCC03E /* NIKFontAwesomeIconFactory+OSX.h */,
+				7566E1C8285883424B66C9AB1093B527 /* NIKFontAwesomeIconTraits.h */,
+				66B5BC1D7DE0BF8AD56771D56A87EAD9 /* NIKFontAwesomeIconTypes.h */,
+				D6F22AE6849AB63191E27995C7CF5B25 /* NIKFontAwesomeImageView.h */,
+				0CBD96E4B94D50320351F5D4BA0A44DE /* NIKFontAwesomeImageView.m */,
+				488AA3DEDBBE6B38AEB7B84DDBE53EDE /* NIKFontAwesomePathFactory.h */,
+				2FDB413F6D2EF851BDF7A0DB691DF885 /* NIKFontAwesomePathFactory.m */,
+				DCC1B6737CF36746E525BB3383632D56 /* NIKFontAwesomePathRenderer.h */,
+				89FB2C3B1176DEA718D277630EAB7DAF /* NIKFontAwesomePathRenderer.m */,
+				3A7F56C436D8211D50EF4F9C517900E4 /* NIKFontAwesomeTabBarItem.h */,
+				AECEAF12276BFB87B65A6ABF38429509 /* NIKFontAwesomeTabBarItem.m */,
+				B4B8EB207AF1B4980B4A249DBA3E7E05 /* Resources */,
+				B1E066BDD03A8803FD5776B618ABCC82 /* Support Files */,
+			);
+			path = FontAwesomeIconFactory;
+			sourceTree = "<group>";
+		};
+		1FEA964C4A9BF4DAFEFE451991B3D06B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8D427F72B4AF5AF8DD4156E62DC3DC88 /* AFNetworkReachabilityManager.h */,
+				388BCEEC93A5080CF8B020137FF5D510 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		318EA0C07524AF9332ADC37A5B222683 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				94ABA9BC6639E2D0961DC6BDF11C5C2D /* AFURLRequestSerialization.h */,
+				96DD5DDA7B4631F8A0A08563C3291692 /* AFURLRequestSerialization.m */,
+				DEC260DF3F55519A24B78D67FD306371 /* AFURLResponseSerialization.h */,
+				C069247B02808FAD12F61CA80ABC4534 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		540C986B67B7BB27249EEB7C2AC5AABF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EDACC271DD083FF119C7C8EE35748CF /* AFNetworking */,
+				120ADEDD9D1A30248CE2595F65AA4206 /* FontAwesomeIconFactory */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5EDACC271DD083FF119C7C8EE35748CF /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				48D316D96476DA93754F8493D35F9A2E /* AFNetworking.h */,
+				C46F2D2B1FDECE0C5E7D18E28912E7CA /* NSURLSession */,
+				1FEA964C4A9BF4DAFEFE451991B3D06B /* Reachability */,
+				F6076E1D105138EA2F9F8F087E5A10DE /* Security */,
+				318EA0C07524AF9332ADC37A5B222683 /* Serialization */,
+				C87FF668A7F84108B6AA255D3E55F5A1 /* Support Files */,
+				10D03E0330C3832C9234F11E46A816DC /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		6088CC4704089B9E4836BB1202830BA3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2020AAF83A319C731918C2E93231FED8 /* CoreGraphics.framework */,
+				85CE8AD2B4B8D0B9A14BCE591CE33FC0 /* CoreText.framework */,
+				E32CB839297214AA328B81EB5684FC73 /* Foundation.framework */,
+				8FC4F9BAF9B362BC3B3F98060111027A /* MobileCoreServices.framework */,
+				044F40FE442816C2385F5E038C7F3722 /* Security.framework */,
+				915B5F168698251555101B63AE19324B /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6DA4D2AA1A643D3C227F07B32BD30B6C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81CDE03EC363761EA60A8462916BE996 /* LiveSignSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		78F506F55F4FEB73BE50A98A378B62B6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D57738A49571766645BBD20E17FF8 /* ControlPanelView.swift */,
+				76D04B18D70D6327C5EEAFAFD4BE49E7 /* ControlPanelView.xib */,
+				48D730E38C4F4B01967400EDC1379289 /* DocumentView.swift */,
+				D2B2C58B33AA08609315C9D9D85C6D83 /* DocumentView.xib */,
+				848517DE3F1038DAD79622A308344E92 /* LinearInterpView.swift */,
+				B052782FBC1CEF0F979F14BFEA46C280 /* LiveSign.swift */,
+				CED37BCED0524DBB763D1BD6ADCA1243 /* PassiveLinearInterpView.swift */,
+				3D41CF349E02D2BE195409E6E4FF9B39 /* RemoteAPI.swift */,
+				0823BE3E2852733AAB5344091324AE98 /* Session.swift */,
+				5B3F3D4E2A53BA6FB8745C5019EF4C02 /* SignatureTrainingView.swift */,
+				02F8E30075DA2C71D3D65151F1D8F1EB /* SignatureTrainingView.xib */,
+				51DDC7CEE950CCC28B4FB000DE5D709B /* SignColors.swift */,
+				412D296D6E3393F1FBE5FE0EE0EDEAE2 /* SignDocumentPanelView.swift */,
+				1CBE7142B0980F73489772470A18449D /* SignDocumentPanelView.xib */,
+				C7864BF113458B7805BAE6BC24EE526A /* Socket.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				6DA4D2AA1A643D3C227F07B32BD30B6C /* Development Pods */,
+				9B000B76F55D0BE93AB9A162DA3F4E38 /* Frameworks */,
+				540C986B67B7BB27249EEB7C2AC5AABF /* Pods */,
+				8AB2F516888FF78EDD2D8BFD36B6E161 /* Products */,
+				9E542DC9A1CBFF33B7227E2C9CE86442 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81CDE03EC363761EA60A8462916BE996 /* LiveSignSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A5A33EC3B2FDE7FBA735A42FE19A2BB5 /* Pod */,
+				98C2B5709EFD0C757F068CB9B024F1D4 /* Support Files */,
+			);
+			name = LiveSignSDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8AB2F516888FF78EDD2D8BFD36B6E161 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A042161B3ABE7DFD920BB40155E37B5 /* AFNetworking.framework */,
+				74C9170431D34CE05349964471FD0605 /* FontAwesomeIconFactory.framework */,
+				DF13E988FE055752A07B1F2EB01B8DEE /* LiveSignSDK.bundle */,
+				F0C8D1F8B8108747F7BCD9CB4A446467 /* LiveSignSDK.framework */,
+				7ACDD62DDA08F60F93BA665E73241597 /* Pods_LiveSignSDK_Example.framework */,
+				09C0BECE8160BEB0C1AA562FBD766F2A /* Pods_LiveSignSDK_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98C2B5709EFD0C757F068CB9B024F1D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE6193A021C48577C3E7D315F1AF929F /* Info.plist */,
+				806286F396A92A34D2F6DF40BD0257D4 /* LiveSignSDK.modulemap */,
+				85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */,
+				A83785CB7850871CB4B6BC4C6DF07D33 /* LiveSignSDK-dummy.m */,
+				E01D37AF1898C43FAEF3C4BAE1F785DE /* LiveSignSDK-prefix.pch */,
+				532766BB42D3C6AF1AFFC9FE39F15A1A /* LiveSignSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LiveSignSDK";
+			sourceTree = "<group>";
+		};
+		9B000B76F55D0BE93AB9A162DA3F4E38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E6EBDFDBFAE50242313FBC80C136AC4 /* AFNetworking.framework */,
+				A1C92127931036DFE0A1E9171471CDBE /* FontAwesomeIconFactory.framework */,
+				6088CC4704089B9E4836BB1202830BA3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E542DC9A1CBFF33B7227E2C9CE86442 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24B9342C856B2C006450396D78AE583 /* Pods-LiveSignSDK_Example */,
+				CC1DEF6BDB59C22F5491D0DD15C97D14 /* Pods-LiveSignSDK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A5A33EC3B2FDE7FBA735A42FE19A2BB5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				78F506F55F4FEB73BE50A98A378B62B6 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		B1E066BDD03A8803FD5776B618ABCC82 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BE77C597A49E11146E042DC55365D7E /* FontAwesomeIconFactory.modulemap */,
+				CD8093F22FBACB85C5B4879BABCF2289 /* FontAwesomeIconFactory.xcconfig */,
+				41881698651DFE01D1960D67E4408D75 /* FontAwesomeIconFactory-dummy.m */,
+				EF712018BE2A3DA1BB67AAB344115408 /* FontAwesomeIconFactory-prefix.pch */,
+				204BA0897EA1C48E9DFFC77ACFDB7B1B /* FontAwesomeIconFactory-umbrella.h */,
+				1CADB8A28C155BB19C3F98813FCDB53D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesomeIconFactory";
+			sourceTree = "<group>";
+		};
+		B4B8EB207AF1B4980B4A249DBA3E7E05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D30FB6140F1CB51C36E0D688D02485A /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C46F2D2B1FDECE0C5E7D18E28912E7CA /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08E4328F25C6AF95C2BDB47BEF4A5 /* AFHTTPSessionManager.h */,
+				3178BA4F74C0613DACFDFCD89717AFE6 /* AFHTTPSessionManager.m */,
+				78C7312ADBA86B7F03A2CD40A584B759 /* AFURLSessionManager.h */,
+				C2AD30F8D9E3232D1995A626A5AF1F65 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		C87FF668A7F84108B6AA255D3E55F5A1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91DD6CB98D9CC50586EF0CD49E55173A /* AFNetworking.modulemap */,
+				78FEA46C1302D5947A7EDE1DDC19214F /* AFNetworking.xcconfig */,
+				C33011CB72889ABBCF248308EF1BACFA /* AFNetworking-dummy.m */,
+				CD40F3258180A059D684865F190931DD /* AFNetworking-prefix.pch */,
+				2B80876C01D29494035893AB32A3291F /* AFNetworking-umbrella.h */,
+				5296B96587BE742AEE97C7CFB57AF160 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		CC1DEF6BDB59C22F5491D0DD15C97D14 /* Pods-LiveSignSDK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1ABC6316FBDBF829D6019A230E2BF9BE /* Info.plist */,
+				DB598BDEB58CBA26FC3E826DC8D91E9E /* Pods-LiveSignSDK_Tests.modulemap */,
+				A428606245A3FF8FA29569858E19F7BB /* Pods-LiveSignSDK_Tests-acknowledgements.markdown */,
+				16C1C215E995FF0A1A1473F3025B748E /* Pods-LiveSignSDK_Tests-acknowledgements.plist */,
+				D5B925DD3F68BB3405F2C407EDFE9898 /* Pods-LiveSignSDK_Tests-dummy.m */,
+				56ABE1DF69261ABDF859E2D2C8ECE957 /* Pods-LiveSignSDK_Tests-frameworks.sh */,
+				FB10C6E202DF6BDB36A57DECEE7AD427 /* Pods-LiveSignSDK_Tests-resources.sh */,
+				98B344210D1331F82730F67F8D9927AF /* Pods-LiveSignSDK_Tests-umbrella.h */,
+				6D1CCC6C940FA9BF0A1EE006757F1A83 /* Pods-LiveSignSDK_Tests.debug.xcconfig */,
+				E7ADAD5C8C83CA69533AA8E39F0B4BAC /* Pods-LiveSignSDK_Tests.release.xcconfig */,
+			);
+			name = "Pods-LiveSignSDK_Tests";
+			path = "Target Support Files/Pods-LiveSignSDK_Tests";
+			sourceTree = "<group>";
+		};
+		F24B9342C856B2C006450396D78AE583 /* Pods-LiveSignSDK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BAB7E3738CE5163A964E93BC832196A4 /* Info.plist */,
+				EF199B7DE72E34C9BECF5D66C803F333 /* Pods-LiveSignSDK_Example.modulemap */,
+				5447B86A7033DF00A97C6D6BB5F573C0 /* Pods-LiveSignSDK_Example-acknowledgements.markdown */,
+				C7276C6529AFFCC81AA4E8AB83FA8572 /* Pods-LiveSignSDK_Example-acknowledgements.plist */,
+				BE36DEA5E4C4B196765CF07B47EB8241 /* Pods-LiveSignSDK_Example-dummy.m */,
+				9D2E20193DECE3DE01609FD07641CD92 /* Pods-LiveSignSDK_Example-frameworks.sh */,
+				3F09C1120F316FAAC3F13CB5CF3967F1 /* Pods-LiveSignSDK_Example-resources.sh */,
+				84361DB289B3EE9581E5905F9157DAF8 /* Pods-LiveSignSDK_Example-umbrella.h */,
+				6318FC5458CEDE081246FD96AC7A1C05 /* Pods-LiveSignSDK_Example.debug.xcconfig */,
+				44E0B7061F256C21CDF45E1F7CF2CDC1 /* Pods-LiveSignSDK_Example.release.xcconfig */,
+			);
+			name = "Pods-LiveSignSDK_Example";
+			path = "Target Support Files/Pods-LiveSignSDK_Example";
+			sourceTree = "<group>";
+		};
+		F6076E1D105138EA2F9F8F087E5A10DE /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				7A9F79F5D6F7FDCE55B5F37E96161B57 /* AFSecurityPolicy.h */,
+				0E194A460F62FD4F64CECA59DE44F3CD /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7C6A0D99A9CC32A19A92A62F8A941139 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC483EF637FB4A2C2E2FC75BA631B87 /* AFAutoPurgingImageCache.h in Headers */,
+				AB39AC9746E7575D7449700475E41B0B /* AFHTTPSessionManager.h in Headers */,
+				5808B477EFF509D810B5CDCFDC944F80 /* AFImageDownloader.h in Headers */,
+				1480F4923DBBF217F60572EEECB4027C /* AFNetworkActivityIndicatorManager.h in Headers */,
+				EC7CADE416A78A1CD6936018A6695126 /* AFNetworking-umbrella.h in Headers */,
+				E7988678C81F7CCB95D239375FC6986D /* AFNetworking.h in Headers */,
+				68152D921ABF6A423C192C04FDF94F0F /* AFNetworkReachabilityManager.h in Headers */,
+				C2DD28375E1F0B1D0D1D2E4E607C499F /* AFSecurityPolicy.h in Headers */,
+				20EE8030FCF2402DAC7F1C9B9DDAEF79 /* AFURLRequestSerialization.h in Headers */,
+				7332F15718920917F544F35CE2C038AA /* AFURLResponseSerialization.h in Headers */,
+				560698A4D707DCBCC1C8F98BC9B89B23 /* AFURLSessionManager.h in Headers */,
+				1E5B8F12ED7CC40ECDB9B1F755F387E5 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				81B617F8D26BB10C5726D75E85D21EB7 /* UIButton+AFNetworking.h in Headers */,
+				9E1E90DED74B73ECE53C9AD76DE53E2D /* UIImage+AFNetworking.h in Headers */,
+				60E3009342BEE96D32C546BE2DB60052 /* UIImageView+AFNetworking.h in Headers */,
+				659960F7E28E993E08CCC1E8A383E710 /* UIKit+AFNetworking.h in Headers */,
+				D9F4E833E37B611B432F6B5D7072DDA2 /* UIProgressView+AFNetworking.h in Headers */,
+				C6354FEC7728A4C86DAD8092509BA7D4 /* UIRefreshControl+AFNetworking.h in Headers */,
+				AE2A07407FB50BA249984DC0620E84C0 /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D824D1437B6DD427A3270A03B15591F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C010484A2D4CCC972FE6D69D3DCC3775 /* FontAwesomeIconFactory-umbrella.h in Headers */,
+				F36244D7BF024A8AE959380EC783ABD0 /* FontAwesomeIconFactory.h in Headers */,
+				9E5EB67C62C652CF27E85B6C0A4395A1 /* NIKFontAwesomeButton.h in Headers */,
+				D237F1ABE076691D5D79751C2A7BB1F5 /* NIKFontAwesomeIcon.h in Headers */,
+				B3F4E355F0597EBDFA1B460F74C95643 /* NIKFontAwesomeIconFactory+iOS.h in Headers */,
+				F935A078D5D45E0C4C678154ABBA4796 /* NIKFontAwesomeIconFactory+OSX.h in Headers */,
+				71F25F23570741D032394BE3377D125C /* NIKFontAwesomeIconFactory.h in Headers */,
+				BCB21E4F2D87C6A8432F1D9F28B40749 /* NIKFontAwesomeIconTraits.h in Headers */,
+				BC471409A05A3CF81F68F038705DF92B /* NIKFontAwesomeIconTypes.h in Headers */,
+				7341FAC6279FC043B2569701183647D9 /* NIKFontAwesomeImageView.h in Headers */,
+				AFCC69B94CDBA344371A1CE3B178EBA5 /* NIKFontAwesomePathFactory.h in Headers */,
+				17AAD6DFAA142121C81AF913C2121663 /* NIKFontAwesomePathRenderer.h in Headers */,
+				FC2A20FD29E4D3A751E9B8A180459FA8 /* NIKFontAwesomeTabBarItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A36A305B938CA7F839EDB3FF5F2B53A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E1B99C7B6C6B5D4330DE7FDF90201CD /* LiveSignSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8ADC8F417D957B9BD6DD634F307AAF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09A317B5759F3027F88DB6BF0C454BE /* Pods-LiveSignSDK_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C86C1782328F0AB45A2BF07918ABA49E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB2964CE47E0057C3A7A2AA14C5354CC /* Pods-LiveSignSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C3436CEA5C3D39764C5F54374794ECB /* AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57800A0D1724774333EF09E83030AA81 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
+			buildPhases = (
+				1F17F426378DF5EC8DFB10304B8C4BA4 /* Sources */,
+				C151364F15F39F7CC60CBF9A3AB49B44 /* Frameworks */,
+				7C6A0D99A9CC32A19A92A62F8A941139 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = 6A042161B3ABE7DFD920BB40155E37B5 /* AFNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		62DFDFEC93EAE1FFCC10BB2D79FB1AAB /* LiveSignSDK-LiveSignSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F497F854F8FB37E0D587F7A1F5280D /* Build configuration list for PBXNativeTarget "LiveSignSDK-LiveSignSDK" */;
+			buildPhases = (
+				B0EE810A3D2A09A80900BA0306EDCBBC /* Sources */,
+				D25E870777AD864AB825755667A8AAE0 /* Frameworks */,
+				0CE17CEBC5DF92B98E836D63B3410131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LiveSignSDK-LiveSignSDK";
+			productName = "LiveSignSDK-LiveSignSDK";
+			productReference = DF13E988FE055752A07B1F2EB01B8DEE /* LiveSignSDK.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		6FB9EF3DE3B040859AF709108F36E170 /* Pods-LiveSignSDK_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92807449E0F414B61D7025A3D049A93 /* Build configuration list for PBXNativeTarget "Pods-LiveSignSDK_Tests" */;
+			buildPhases = (
+				47B3D5580F6F5D34C826418F5E2109C6 /* Sources */,
+				6681988F5CAC25B11474DDA0126D3DAF /* Frameworks */,
+				B8ADC8F417D957B9BD6DD634F307AAF4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				896638F2F37A1ED84C5364C16048DDA8 /* PBXTargetDependency */,
+				60CF4A2E362D12FC3104C5E2FD10A3E4 /* PBXTargetDependency */,
+				29654CE45BDBAC6280D2916E8B42D6B0 /* PBXTargetDependency */,
+			);
+			name = "Pods-LiveSignSDK_Tests";
+			productName = "Pods-LiveSignSDK_Tests";
+			productReference = 09C0BECE8160BEB0C1AA562FBD766F2A /* Pods_LiveSignSDK_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B063B2A6485CFEBF1E9B7062324A8165 /* Pods-LiveSignSDK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A903A04EF9EACC266DA8DD1A18EA88E9 /* Build configuration list for PBXNativeTarget "Pods-LiveSignSDK_Example" */;
+			buildPhases = (
+				D7E1FE436F562FB818DAAC8ACF8FCD30 /* Sources */,
+				DEC96A231313AE16C1BD685B6DC4A342 /* Frameworks */,
+				C86C1782328F0AB45A2BF07918ABA49E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCD6923479ACECCB062497C7E91ED1C /* PBXTargetDependency */,
+				EC0FDFBF2E66D15401325E727E8193E6 /* PBXTargetDependency */,
+				BD7D023C439053DF10BAA6CEF3923823 /* PBXTargetDependency */,
+			);
+			name = "Pods-LiveSignSDK_Example";
+			productName = "Pods-LiveSignSDK_Example";
+			productReference = 7ACDD62DDA08F60F93BA665E73241597 /* Pods_LiveSignSDK_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C1967A1B7BD24B96811D1E776757119B /* FontAwesomeIconFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62484F7174391294D2AE8AA647D729A /* Build configuration list for PBXNativeTarget "FontAwesomeIconFactory" */;
+			buildPhases = (
+				315B60E2ADBD0787CB2B2C6F2195822E /* Sources */,
+				C1D6AFDA3C4D7B62F99B163B3B9BDDF2 /* Frameworks */,
+				8D824D1437B6DD427A3270A03B15591F /* Headers */,
+				CC2A68C20F22AFBC4BF7A50D8EA2E643 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontAwesomeIconFactory;
+			productName = FontAwesomeIconFactory;
+			productReference = 74C9170431D34CE05349964471FD0605 /* FontAwesomeIconFactory.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3D1ED164DDB4D65567E25AFEC9D6A6C /* LiveSignSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26F9DBD3CC2C31B4D55D73D5D280559B /* Build configuration list for PBXNativeTarget "LiveSignSDK" */;
+			buildPhases = (
+				9D3FEF18F7CE5C76B17C9083A92E57BD /* Sources */,
+				A6ECE6A9F6BDBA11FD71323FB4D43E43 /* Frameworks */,
+				491E580787F33F31B31803007E2A70C7 /* Resources */,
+				A36A305B938CA7F839EDB3FF5F2B53A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				819A367ABB3B418B85B391A2C9CD74C7 /* PBXTargetDependency */,
+				016B96B348B813753DD8F1BE76E3B3FB /* PBXTargetDependency */,
+				CBB9C16CB79B2DEC6DFFC882C805675D /* PBXTargetDependency */,
+			);
+			name = LiveSignSDK;
+			productName = LiveSignSDK;
+			productReference = F0C8D1F8B8108747F7BCD9CB4A446467 /* LiveSignSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8AB2F516888FF78EDD2D8BFD36B6E161 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C3436CEA5C3D39764C5F54374794ECB /* AFNetworking */,
+				C1967A1B7BD24B96811D1E776757119B /* FontAwesomeIconFactory */,
+				C3D1ED164DDB4D65567E25AFEC9D6A6C /* LiveSignSDK */,
+				62DFDFEC93EAE1FFCC10BB2D79FB1AAB /* LiveSignSDK-LiveSignSDK */,
+				B063B2A6485CFEBF1E9B7062324A8165 /* Pods-LiveSignSDK_Example */,
+				6FB9EF3DE3B040859AF709108F36E170 /* Pods-LiveSignSDK_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CE17CEBC5DF92B98E836D63B3410131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491E580787F33F31B31803007E2A70C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1936562C06648208F5C16FF400260E32 /* LiveSignSDK.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2A68C20F22AFBC4BF7A50D8EA2E643 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A41CC2B1186F23590F9045C34BB10FF /* FontAwesome.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F17F426378DF5EC8DFB10304B8C4BA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1BC9BAFFEEABB1ABC7614DF0FC97D5 /* AFAutoPurgingImageCache.m in Sources */,
+				E0D4045AC4C1B41917FCA23A042D18B2 /* AFHTTPSessionManager.m in Sources */,
+				CFA8D6B529A0EBFF0316F2629AB2556E /* AFImageDownloader.m in Sources */,
+				A6C6019D45BE62C61210A9CC619368EF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */,
+				68A38977EBAE334DC3C22386D00D2622 /* AFNetworkReachabilityManager.m in Sources */,
+				20607BE2B1E5F31765026E5AC64DB27D /* AFSecurityPolicy.m in Sources */,
+				DFFA215EEAA8DDBD540076927535275C /* AFURLRequestSerialization.m in Sources */,
+				B5852322ADE88AAD56EE042B80BA81E4 /* AFURLResponseSerialization.m in Sources */,
+				707B1A7541C8DBDDE8C27896A61370BE /* AFURLSessionManager.m in Sources */,
+				6ED4ABEE8A5F51F5ECB59FA1781D29C6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				AF03C11A1FAC8132AD3749D8F541701A /* UIButton+AFNetworking.m in Sources */,
+				2E8A32ED46194EDBE22146271F6D26DE /* UIImageView+AFNetworking.m in Sources */,
+				5FF6453E55785669885F626B853FD2AA /* UIProgressView+AFNetworking.m in Sources */,
+				174202BD6AE0E4A41F5CE66E975EAE52 /* UIRefreshControl+AFNetworking.m in Sources */,
+				A462945883F7729B185B64B679A6BFBE /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315B60E2ADBD0787CB2B2C6F2195822E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E1E318776CB752042BE59D8E65BF56 /* FontAwesomeIconFactory-dummy.m in Sources */,
+				D08FA788CE05180C1815C249FAF8D58D /* NIKFontAwesomeButton.m in Sources */,
+				0F7C38BEA5AFA3A7E1FA70B0532CC4A5 /* NIKFontAwesomeIconFactory.m in Sources */,
+				50BD341A15ECC2B66B8FBA5184855688 /* NIKFontAwesomeImageView.m in Sources */,
+				BA4C7EC9A37D7172D8D230986DA4F9D2 /* NIKFontAwesomePathFactory.m in Sources */,
+				E5066FEC09C21B7A960B1F50F5454C58 /* NIKFontAwesomePathRenderer.m in Sources */,
+				C9FBB9F6A131EE623422E722E61EC81B /* NIKFontAwesomeTabBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B3D5580F6F5D34C826418F5E2109C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E42CD7D6A7BD4AEFD284C3193DB40F /* Pods-LiveSignSDK_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D3FEF18F7CE5C76B17C9083A92E57BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37ADB72FC19D10E0BDF6AFD1CCA181 /* ControlPanelView.swift in Sources */,
+				38E39CE4DADF5B1F3F091DA62EAF9BB7 /* ControlPanelView.xib in Sources */,
+				3B36248CD32BFFF00109D96E0CEF6395 /* DocumentView.swift in Sources */,
+				27424AB4058BD73B64047009C964E095 /* DocumentView.xib in Sources */,
+				DB4AABD23180C2AFA25ACA3F36B92298 /* LinearInterpView.swift in Sources */,
+				B4990EFC059513016DF4E9A8DFE4430A /* LiveSign.swift in Sources */,
+				F1D41227B7D64A47C8132958268C68DD /* LiveSignSDK-dummy.m in Sources */,
+				81F63FD4CC78AA3DBE4F2FDF2FE03F98 /* PassiveLinearInterpView.swift in Sources */,
+				48AF1B5CDE30A47515B5C6DFC3E25313 /* RemoteAPI.swift in Sources */,
+				8A145C65F21A4C26C887C5A565F2C35C /* Session.swift in Sources */,
+				BCFA4EA86289830BEC5B14B88E43F98B /* SignatureTrainingView.swift in Sources */,
+				8A65011A78BA894ECE80B4548C5C9560 /* SignatureTrainingView.xib in Sources */,
+				1DD5E3BF38211F744FB784FC106AE0D9 /* SignColors.swift in Sources */,
+				F0E0938442D2739760665159F6EDF9B3 /* SignDocumentPanelView.swift in Sources */,
+				9F17461E35B1B4FEA52916DC83984BCA /* SignDocumentPanelView.xib in Sources */,
+				FAC8107675A5AFE0EAB09E43182B3D1D /* Socket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0EE810A3D2A09A80900BA0306EDCBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E1FE436F562FB818DAAC8ACF8FCD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549BB442AF7F90B5B941592114C1B5F2 /* Pods-LiveSignSDK_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		016B96B348B813753DD8F1BE76E3B3FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeIconFactory;
+			target = C1967A1B7BD24B96811D1E776757119B /* FontAwesomeIconFactory */;
+			targetProxy = 96E59E378EF78F969EC83BB8AFE2E2F6 /* PBXContainerItemProxy */;
+		};
+		29654CE45BDBAC6280D2916E8B42D6B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LiveSignSDK;
+			target = C3D1ED164DDB4D65567E25AFEC9D6A6C /* LiveSignSDK */;
+			targetProxy = C6495579DDB4C08874FD8999679362E4 /* PBXContainerItemProxy */;
+		};
+		60CF4A2E362D12FC3104C5E2FD10A3E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeIconFactory;
+			target = C1967A1B7BD24B96811D1E776757119B /* FontAwesomeIconFactory */;
+			targetProxy = B8A6E62A493C8227A0D2C26A1571AE1E /* PBXContainerItemProxy */;
+		};
+		819A367ABB3B418B85B391A2C9CD74C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 1C3436CEA5C3D39764C5F54374794ECB /* AFNetworking */;
+			targetProxy = CBB486ED344A84A76E95E68EF7DB68AF /* PBXContainerItemProxy */;
+		};
+		896638F2F37A1ED84C5364C16048DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 1C3436CEA5C3D39764C5F54374794ECB /* AFNetworking */;
+			targetProxy = 0BD51A6FCFA2AD28C86619C6B27B4942 /* PBXContainerItemProxy */;
+		};
+		BD7D023C439053DF10BAA6CEF3923823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LiveSignSDK;
+			target = C3D1ED164DDB4D65567E25AFEC9D6A6C /* LiveSignSDK */;
+			targetProxy = C6AF3E7FF26FBC67B59962012166C388 /* PBXContainerItemProxy */;
+		};
+		CBB9C16CB79B2DEC6DFFC882C805675D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LiveSignSDK-LiveSignSDK";
+			target = 62DFDFEC93EAE1FFCC10BB2D79FB1AAB /* LiveSignSDK-LiveSignSDK */;
+			targetProxy = 27AFC767ACF3605A3EE4BB59B9E30C12 /* PBXContainerItemProxy */;
+		};
+		EC0FDFBF2E66D15401325E727E8193E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeIconFactory;
+			target = C1967A1B7BD24B96811D1E776757119B /* FontAwesomeIconFactory */;
+			targetProxy = 99296BE78EE3FB9717DE17E3B108DFC5 /* PBXContainerItemProxy */;
+		};
+		EFCD6923479ACECCB062497C7E91ED1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 1C3436CEA5C3D39764C5F54374794ECB /* AFNetworking */;
+			targetProxy = B171CDA1D44C2269F7FE3AFCF9D089E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02CC087CBB8F4D94CEA9323B71003B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8093F22FBACB85C5B4879BABCF2289 /* FontAwesomeIconFactory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeIconFactory/FontAwesomeIconFactory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeIconFactory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeIconFactory/FontAwesomeIconFactory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FontAwesomeIconFactory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		035E31ADAA50F0608F1164766D9DC736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8093F22FBACB85C5B4879BABCF2289 /* FontAwesomeIconFactory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeIconFactory/FontAwesomeIconFactory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeIconFactory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeIconFactory/FontAwesomeIconFactory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FontAwesomeIconFactory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37444B7E48722249B8380319E03EDE65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7ADAD5C8C83CA69533AA8E39F0B4BAC /* Pods-LiveSignSDK_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveSignSDK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveSignSDK_Tests/Pods-LiveSignSDK_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LiveSignSDK_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		66EE4C6A8216E9336FA227C6C569DD7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6318FC5458CEDE081246FD96AC7A1C05 /* Pods-LiveSignSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveSignSDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveSignSDK_Example/Pods-LiveSignSDK_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LiveSignSDK_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79214E40087CD0D1A3C28857D20327F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D1CCC6C940FA9BF0A1EE006757F1A83 /* Pods-LiveSignSDK_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveSignSDK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveSignSDK_Tests/Pods-LiveSignSDK_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LiveSignSDK_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A235AF33A4AFC4EC3F9345F48177E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FEA46C1302D5947A7EDE1DDC19214F /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91D0E776BDAD0DB33E3B0E24EC254E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LiveSignSDK/LiveSignSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LiveSignSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LiveSignSDK/LiveSignSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LiveSignSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A3FBC58DA63DAAB6E5EEA423850170E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LiveSignSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B22BBC42FCB129553A13AB7DB286B0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E0B7061F256C21CDF45E1F7CF2CDC1 /* Pods-LiveSignSDK_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveSignSDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveSignSDK_Example/Pods-LiveSignSDK_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LiveSignSDK_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B2C30C971F71D264D274069591100E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LiveSignSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BE1FB2CBEFA0FCF7B1C5788A258BB4B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85963DD38758D59F5673F24E71E846AF /* LiveSignSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LiveSignSDK/LiveSignSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LiveSignSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LiveSignSDK/LiveSignSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LiveSignSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BFC95FB0FE8741CEE4B5430A6060403E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FEA46C1302D5947A7EDE1DDC19214F /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26F9DBD3CC2C31B4D55D73D5D280559B /* Build configuration list for PBXNativeTarget "LiveSignSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE1FB2CBEFA0FCF7B1C5788A258BB4B4 /* Debug */,
+				91D0E776BDAD0DB33E3B0E24EC254E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57800A0D1724774333EF09E83030AA81 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A235AF33A4AFC4EC3F9345F48177E4E /* Debug */,
+				BFC95FB0FE8741CEE4B5430A6060403E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F497F854F8FB37E0D587F7A1F5280D /* Build configuration list for PBXNativeTarget "LiveSignSDK-LiveSignSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C30C971F71D264D274069591100E06 /* Debug */,
+				A3FBC58DA63DAAB6E5EEA423850170E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A903A04EF9EACC266DA8DD1A18EA88E9 /* Build configuration list for PBXNativeTarget "Pods-LiveSignSDK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EE4C6A8216E9336FA227C6C569DD7F /* Debug */,
+				B22BBC42FCB129553A13AB7DB286B0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B92807449E0F414B61D7025A3D049A93 /* Build configuration list for PBXNativeTarget "Pods-LiveSignSDK_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79214E40087CD0D1A3C28857D20327F7 /* Debug */,
+				37444B7E48722249B8380319E03EDE65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C62484F7174391294D2AE8AA647D729A /* Build configuration list for PBXNativeTarget "FontAwesomeIconFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				035E31ADAA50F0608F1164766D9DC736 /* Debug */,
+				02CC087CBB8F4D94CEA9323B71003B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

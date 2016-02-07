@@ -1,15 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view alpha="0.80000000000000004" contentMode="scaleToFill" restorationIdentifier="ControlPanelView" id="iN0-l3-epB" customClass="ControlPanelView" customModule="LiveSignSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="85"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nl0-EK-Lg6" userLabel="Prev" customClass="NIKFontAwesomeButton">
+                    <rect key="frame" x="15" y="0.0" width="121" height="84"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconHex" value="f053"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="size">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onLeftTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="EwV-Nd-V6a"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הבא" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh8-J0-AQd">
+                    <rect key="frame" x="61" y="63" width="30" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-c0-sYg" userLabel="Sign" customClass="NIKFontAwesomeButton">
+                    <rect key="frame" x="150" y="0.0" width="120" height="84"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconHex" value="f044"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="size">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onSignTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="Eha-d9-K5M"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אשר וחתום" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT3-Th-fzs">
+                    <rect key="frame" x="174" y="63" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-Hn-0Tb" userLabel="Next" customClass="NIKFontAwesomeButton">
+                    <rect key="frame" x="285" y="0.0" width="121" height="84"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconHex" value="f054"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="size">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onRightTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Vr-ON-7jO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הקודם" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLR-Vi-Coe">
+                    <rect key="frame" x="324" y="63" width="43" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.73333333329999995" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZQP-Hn-0Tb" secondAttribute="trailing" constant="15" id="3Z9-bB-pLL"/>
+                <constraint firstAttribute="bottom" secondItem="Nl0-EK-Lg6" secondAttribute="bottom" constant="1" id="4Ox-JS-AOz"/>
+                <constraint firstItem="mLR-Vi-Coe" firstAttribute="centerY" secondItem="rT3-Th-fzs" secondAttribute="centerY" id="5d0-tf-i6q"/>
+                <constraint firstItem="ZQP-Hn-0Tb" firstAttribute="centerY" secondItem="uAD-c0-sYg" secondAttribute="centerY" id="FUT-TT-opR"/>
+                <constraint firstItem="Nl0-EK-Lg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HRR-ET-i34"/>
+                <constraint firstItem="ZQP-Hn-0Tb" firstAttribute="width" secondItem="uAD-c0-sYg" secondAttribute="width" id="J9E-HI-2go"/>
+                <constraint firstItem="ZQP-Hn-0Tb" firstAttribute="leading" secondItem="uAD-c0-sYg" secondAttribute="trailing" constant="15" id="Kuq-Vl-jPV"/>
+                <constraint firstItem="mLR-Vi-Coe" firstAttribute="centerX" secondItem="ZQP-Hn-0Tb" secondAttribute="centerX" id="RVs-mT-jLa"/>
+                <constraint firstItem="uAD-c0-sYg" firstAttribute="width" secondItem="Nl0-EK-Lg6" secondAttribute="width" id="XZO-gK-IbO"/>
+                <constraint firstItem="zh8-J0-AQd" firstAttribute="top" secondItem="Nl0-EK-Lg6" secondAttribute="bottom" constant="-21" id="fSh-AA-xKB"/>
+                <constraint firstItem="uAD-c0-sYg" firstAttribute="leading" secondItem="Nl0-EK-Lg6" secondAttribute="trailing" constant="15" id="gb0-9h-fjV"/>
+                <constraint firstItem="uAD-c0-sYg" firstAttribute="centerY" secondItem="Nl0-EK-Lg6" secondAttribute="centerY" id="gw5-e5-43c"/>
+                <constraint firstItem="zh8-J0-AQd" firstAttribute="centerX" secondItem="Nl0-EK-Lg6" secondAttribute="centerX" id="iZY-eV-EDl"/>
+                <constraint firstItem="uAD-c0-sYg" firstAttribute="height" secondItem="Nl0-EK-Lg6" secondAttribute="height" id="jus-Ch-5I1"/>
+                <constraint firstItem="rT3-Th-fzs" firstAttribute="centerX" secondItem="uAD-c0-sYg" secondAttribute="centerX" id="oET-sC-8Op"/>
+                <constraint firstItem="ZQP-Hn-0Tb" firstAttribute="height" secondItem="uAD-c0-sYg" secondAttribute="height" id="ozI-pN-WiL"/>
+                <constraint firstItem="Nl0-EK-Lg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="rve-Qg-2TT"/>
+                <constraint firstItem="rT3-Th-fzs" firstAttribute="centerY" secondItem="zh8-J0-AQd" secondAttribute="centerY" id="yKq-WJ-fsp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="308.5" y="-124.5"/>
         </view>
     </objects>
 </document>
