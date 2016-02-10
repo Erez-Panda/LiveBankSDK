@@ -14,6 +14,16 @@ class SignatureTrainingView: UIView {
     
     @IBOutlet weak var signWrapperView: UIView!
     var signView: SignDocumentPanelView?
+    var okPanelView: OkCancelView?
+    
+    func onPanelOk(){
+        signView?.disable()
+        onSignViewSign(signView!.signView, origin: signView!.frame.origin)
+    }
+    
+    func onPanelClean(){
+        signView?.clean()
+    }
     
     func attachToView(view: UIView){
         view.addSubview(self)
@@ -24,6 +34,11 @@ class SignatureTrainingView: UIView {
         signView = NSBundle(forClass: LiveSign.self).loadNibNamed("SignDocumentPanelView", owner: self, options: nil)[0] as? SignDocumentPanelView
         signView?.attachToView(signWrapperView)
         signView?.onSign = onSignViewSign
+        okPanelView = NSBundle(forClass: LiveSign.self).loadNibNamed("OkCancelView", owner: self, options: nil)[0] as? OkCancelView
+        okPanelView?.onClean = onPanelClean
+        okPanelView?.onOk = onPanelOk
+        okPanelView?.attachToView(signView!, superView: self)
+        
     }
     
     func onSignViewSign(signatureView: LinearInterpView, origin: CGPoint){
@@ -42,6 +57,7 @@ class SignatureTrainingView: UIView {
             //
         }
         signView?.removeFromSuperview()
+        okPanelView?.removeFromSuperview()
         addNewSignature()
     }
 
@@ -51,9 +67,6 @@ class SignatureTrainingView: UIView {
     }
     
     @IBAction func onCancelTouch(sender: AnyObject) {
-        self.removeFromSuperview()
-    }
-    @IBAction func onOkTouch(sender: AnyObject) {
-        self.removeFromSuperview()
+        self.fadeOut(duration: 0.325, remove: true)
     }
 }

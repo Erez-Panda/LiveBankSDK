@@ -28,6 +28,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     var signedImageView: UIImageView?
     var controlPanelView: ControlPanelView?
     var controlPanelTimer: NSTimer?
+    var okPanelView: OkCancelView?
     
     var preLoadedImages: Array<Dictionary<Int, UIImage?>> = []
     var signatureBoxes:Dictionary<Int, Array<Dictionary<String, AnyObject>>> = [:]
@@ -40,6 +41,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     var modifiedImages: Dictionary<String, UIImage?> = [:]
     
     var lastSignatureData: Dictionary<String, AnyObject>?
+    var currentOrientation: UIDeviceOrientation?
 
     
     
@@ -56,7 +58,6 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
             swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
             swipeLeft.cancelsTouchesInView = false
             self.addGestureRecognizer(swipeLeft)
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
             if ((currentImage) != nil){
                 presentaionImage?.image = currentImage
             }
@@ -87,6 +88,9 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     }
     
     func onSignViewClose(sender: UIView){
+        okPanelView?.removeFromSuperview()
+        okPanelView = nil
+        signView?.removeFromSuperview()
         self.signView = nil
         if scrollView?.zoomScale > 1{
             scrollView?.scrollEnabled = true
@@ -144,6 +148,9 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     }
     
     func addSignatureToImage(){
+        if (presentaionImage == nil && presentaionImage!.image == nil){
+            return
+        }
         if let data = lastSignatureData{
             let scaledSignView = data["scaledSignView"] as! PassiveLinearInterpView
             let X = data["X"] as! CGFloat
@@ -180,7 +187,53 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         }
     }
     
+    func addTextToImage(data: Dictionary<String, AnyObject>){
+        if (presentaionImage == nil && presentaionImage!.image == nil){
+            return
+        }
+        let document = presentaionImage!.image!
+    
+        
+        let screenWidth = data["image_width"] as! CGFloat
+        let screenHeight = data["image_height"] as! CGFloat
+        let width = data["width"] as! CGFloat
+        let height = data["height"] as! CGFloat
+        
+        //Image is aspect fit, scale factor will be the biggest change on image
+        let x = data["left"] as! CGFloat// * (screen.width-widthDiff)
+        let y = data["top"] as! CGFloat// * (screen.height-heightDiff)
+        
+        let originalScaling = max(document.size.width/screenWidth, document.size.height/screenHeight)
+        
+        let remoteTextView = UITextField(frame: CGRectMake(0,0,width*originalScaling,height*originalScaling))
+        
+        
+        let fontSize = data["font_size"] as! CGFloat
+        remoteTextView.text = data["text"] as? String
+        remoteTextView.font = remoteTextView.font!.fontWithSize(fontSize*originalScaling)
+        
+        let scaledTextImage = takeScreenshot(remoteTextView)
+        UIGraphicsBeginImageContext(document.size)
+        document.drawInRect(CGRectMake(0,0,document.size.width, document.size.height))
+        scaledTextImage.drawInRect(CGRectMake((x*document.size.width),(y*document.size.height),remoteTextView.frame.width, remoteTextView.frame.height))
+        let signedDoc = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let image: UIImage = signedDoc
+        self.presentaionImage?.image = image
+        if currentImageUrl != nil {
+            modifiedImages[currentImageUrl!] = image
+        }
+        if currentPage != nil && currentDocument != nil {
+            setImageAtIndex(image, document: currentDocument!, page: currentPage!)
+        }
+        scrollView?.scrollEnabled = false
+        self.scrollView?.setZoomScale(1, animated: false)
+    }
+    
     func onSignViewSign(signatureView: LinearInterpView, origin: CGPoint){
+        if (presentaionImage == nil && presentaionImage!.image == nil){
+            return
+        }
         let screen =  UIScreen.mainScreen().bounds
         let zoom = scrollView!.zoomScale
         //let offset = scrollView!.contentOffset
@@ -224,6 +277,8 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     }
     
     func closeOpenPanels(){
+        okPanelView?.removeFromSuperview()
+        okPanelView = nil
         signView?.removeFromSuperview()
         signView = nil
         if scrollView?.zoomScale > 1{
@@ -231,94 +286,95 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         }
     }
     
-    func rotated(){
-        if signView != nil && currentBox != nil {
-            let box = self.signatureBoxes[self.currentPage!]![currentBox!]
-            var bounds = UIScreen.mainScreen().bounds.size
-            if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
-                bounds = CGSizeMake(bounds.height, bounds.width)
-            }
-            //let h: CGFloat = 120
-            let w: CGFloat = 0.8*bounds.width
-            let document = self.presentaionImage!.image!
-            let top = box["top"] as! CGFloat*document.size.height
-            let left = (box["left"] as! CGFloat)*document.size.width
-            let width = box["width"] as! CGFloat*document.size.width
-            let height = box["height"] as! CGFloat*document.size.height
-            
-            let scale = w/width
-            //Image is aspect fit, scale factor will be the biggest change on image
-            let scaleRatio = max(document.size.width/bounds.width, document.size.height/bounds.height)
-            self.scrollView?.setZoomScale(scaleRatio*scale, animated: false)
-            
-            //One of these has to be 0
-            let heightDiff = (bounds.height*scaleRatio) - document.size.height
-            let widthDiff = (bounds.width*scaleRatio) - document.size.width
-            
-            let X = left*scale+widthDiff-((bounds.width-(4/3)*w)/2)
-            let Y = top*scale+heightDiff-((bounds.height-height*scale)/2)
-            self.scrollView?.contentOffset = CGPointMake(X, Y)
-            signView!.frame = CGRectMake(0.5*(bounds.width-w), 0.5*(bounds.height-height*scale), w, height*scale)
-            
-        }
-    }
-    
-    
-    func signDocument(box: Dictionary<String, AnyObject>?){
-        if nil==box{
+    func setBoxPosition(box: Dictionary<String, AnyObject>?){
+        if (presentaionImage == nil && presentaionImage!.image == nil){
             return
         }
-        scrollView?.scrollEnabled = false
-        let bounds = UIScreen.mainScreen().bounds
-        //let h: CGFloat = 120
-        let w: CGFloat = 0.8*bounds.width
-        let document = self.presentaionImage!.image!
-        let top = box!["top"] as! CGFloat*document.size.height
-        let left = (box!["left"] as! CGFloat)*document.size.width
-        let width = box!["width"] as! CGFloat*document.size.width
-        let height = box!["height"] as! CGFloat*document.size.height
-
-        let scale = w/width
-        //Image is aspect fit, scale factor will be the biggest change on image
-        let scaleRatio = max(document.size.width/bounds.width, document.size.height/bounds.height)
-        self.scrollView?.setZoomScale(scaleRatio*scale, animated: false)
+        if signView != nil && box != nil {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.scrollView?.scrollEnabled = false
+                var bounds = UIScreen.mainScreen().bounds.size
+                if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
+                    bounds = CGSizeMake(max(bounds.height, bounds.width), min(bounds.height, bounds.width))
+                }
+                if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)){
+                    bounds = CGSizeMake(min(bounds.height, bounds.width), max(bounds.height, bounds.width))
+                }
+                //let h: CGFloat = 120
+                let w: CGFloat = 0.8*bounds.width
+                let document = self.presentaionImage!.image!
+                let top = box!["top"] as! CGFloat*document.size.height
+                let left = (box!["left"] as! CGFloat)*document.size.width
+                let width = box!["width"] as! CGFloat*document.size.width
+                let height = box!["height"] as! CGFloat*document.size.height
+                
+                let scale = w/width
+                //Image is aspect fit, scale factor will be the biggest change on image
+                let scaleRatio = max(document.size.width/bounds.width, document.size.height/bounds.height)
+                self.scrollView?.setZoomScale(scaleRatio*scale, animated: false)
+                
+                //One of these has to be 0
+                let heightDiff = (bounds.height*scaleRatio*scale - document.size.height*scale)/2
+                let widthDiff = (bounds.width*scaleRatio*scale - document.size.width*scale)/2
+                
+                let h = w/2//min(height*scale, bounds.height*0.8)
+                let topOffset = max(0, height*scale - w/2)
+                
+                let X = left*scale+widthDiff-((bounds.width-w)/2)
+                let Y = top*scale+heightDiff-((bounds.height-(h+2*topOffset))/2)
+                
+                self.scrollView?.contentOffset = CGPointMake(X, Y)
+                self.signView?.frame = CGRectMake(0.5*(bounds.width-w), 0.5*(bounds.height-h), w, h)
+            }
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if currentOrientation != UIDevice.currentDevice().orientation{
+            currentOrientation = UIDevice.currentDevice().orientation
+            if (nil != self.currentBox){
+                setBoxPosition(self.signatureBoxes[self.currentPage!]?[self.currentBox!])
+            }
+        }
+    }
+    
+    
+    func onPanelOk(){
+        if let sv = signView{
+            if !sv.isEmpty(){
+                sv.disable()
+                onSignViewSign(sv.signView, origin: sv.frame.origin)
+                okPanelView?.removeFromSuperview()
+            }
+        }
         
-        //One of these has to be 0
-        let heightDiff = (bounds.height*scaleRatio) - document.size.height
-        let widthDiff = (bounds.width*scaleRatio) - document.size.width
-        
-        let X = left*scale+widthDiff-((bounds.width-(4/3)*w)/2)
-        let Y = top*scale+heightDiff-((bounds.height-height*scale)/2)
-        
-        self.scrollView?.contentOffset = CGPointMake(X, Y)
-        closeOpenPanels()
-        signView = NSBundle(forClass: LiveSign.self).loadNibNamed("SignDocumentPanelView", owner: self, options: nil)[0] as? SignDocumentPanelView
-        signView!.frame = CGRectMake(0.5*(bounds.width-w), 0.5*(bounds.height-height*scale), w, height*scale)
-        signView?.onClose = onSignViewClose
-        signView?.onSign = onSignViewSign
-        self.addSubview(signView!)
+    }
+    
+    func onPanelClean(){
+        signView?.clean()
+    }
+    
+    func signDocument(box: Dictionary<String, AnyObject>? = nil){
+        if (nil != box){
+            closeOpenPanels()
+            signView = NSBundle(forClass: LiveSign.self).loadNibNamed("SignDocumentPanelView", owner: self, options: nil)[0] as? SignDocumentPanelView
+            signView?.onClose = onSignViewClose
+    //        signView?.onSign = onSignViewSign
+            
+            setBoxPosition(box)
+            self.addSubview(signView!)
+            okPanelView = NSBundle(forClass: LiveSign.self).loadNibNamed("OkCancelView", owner: self, options: nil)[0] as? OkCancelView
+            okPanelView?.onClean = onPanelClean
+            okPanelView?.onOk = onPanelOk
+            okPanelView?.attachToView(signView!, superView: self)
+        }
     }
 
-    func signDocument() {
-        closeOpenPanels()
-        signView = NSBundle(forClass: LiveSign.self).loadNibNamed("SignDocumentPanelView", owner: self, options: nil)[0] as? SignDocumentPanelView
-        let bounds = UIScreen.mainScreen().bounds
-        signView!.frame = CGRectMake(20, 0.5*bounds.height, 250, 120)
-        signView?.onClose = onSignViewClose
-        signView?.onSign = onSignViewSign
-        self.addSubview(signView!)
-        
-    }
 
     func tap(sender:  UITapGestureRecognizer) {
         if signView != nil {
-            if (!CGRectContainsPoint(signView!.frame, sender.locationInView(self))){
-                signView?.removeFromSuperview()
-                signView = nil
-                if scrollView?.zoomScale > 1{
-                    scrollView?.scrollEnabled = true
-                }
-            }
+            
         } else if nil != controlPanelView && controlPanelView!.isVisible(){
             controlPanelView?.hide()
             controlPanelTimer?.invalidate()
@@ -337,11 +393,17 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         self.signDocument(self.getNextBox())
     }
     
+    func closeView(){
+        self.fadeOut(duration: 0.325, remove: true)
+        Session.sharedInstance.disconnect()
+    }
+    
     func addControlPanel(){
         controlPanelView = NSBundle(forClass: LiveSign.self).loadNibNamed("ControlPanelView", owner: self, options: nil)[0] as? ControlPanelView
         controlPanelView?.onLeft = swipeRight
         controlPanelView?.onRight = swipeLeft
         controlPanelView?.onSign = openNextBox
+        controlPanelView?.onClose = closeView
         controlPanelView?.attachToView(self)
         controlPanelTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: Selector("hideControlPanel"), userInfo: AnyObject?(), repeats: false)
     }
@@ -365,7 +427,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     }
     
     func swipeLeft(){
-        if signView==nil && self.currentPage != nil && self.currentPage < preLoadedImages.count-1{
+        if signView==nil && self.currentPage != nil && self.currentPage < preLoadedImages[self.currentDocument!].count-1{
             selectPage(self.currentPage!+1)
         }
     }
@@ -392,20 +454,22 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     }
     
     func selectPage(index: Int){
-        self.signedImageView?.removeFromSuperview()
-        self.signedImageView = nil
-        self.scrollView?.setZoomScale(1.0, animated: false)
-        scrollView?.scrollEnabled = false
-        let prevIndex = currentPage
-        self.currentPage = index
-        if let image = self.getImageAtIndex(self.currentDocument!, page: self.currentPage!){
-            if let pImg = self.presentaionImage {
-                dispatch_async(dispatch_get_main_queue()){
-                    //pImg.image = image
-                    self.animateImageView(image, toRight: prevIndex<index)
+        if (index != self.currentPage){
+            self.signedImageView?.removeFromSuperview()
+            self.signedImageView = nil
+            self.scrollView?.setZoomScale(1.0, animated: false)
+            scrollView?.scrollEnabled = false
+            let prevIndex = currentPage
+            self.currentPage = index
+            if let image = self.getImageAtIndex(self.currentDocument!, page: self.currentPage!){
+                if nil != self.presentaionImage {
+                    dispatch_async(dispatch_get_main_queue()){
+                        //pImg.image = image
+                        self.animateImageView(image, toRight: prevIndex<index)
+                    }
+                } else {
+                    self.currentImage = image
                 }
-            } else {
-                self.currentImage = image
             }
         }
     }
@@ -438,6 +502,9 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     
     func registerForMessages(){
         Session.sharedInstance.onMessage("load_res_with_index") { (message) -> Void in
+            if (self.signView != nil){
+                return
+            }
             self.signedImageView?.removeFromSuperview()
             self.signedImageView = nil
             self.scrollView?.setZoomScale(1.0, animated: false)
@@ -540,6 +607,28 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
             }
         }
         
+        Session.sharedInstance.onMessage("add_text") { (message) -> Void in
+            if let data = message{
+                self.addTextToImage(data)
+            }
+        }
+        
+        
+        Session.sharedInstance.onMessage("translate_and_scale") { (message) -> Void in
+            if (self.signView != nil){
+                return
+            }
+            if let data = message{
+                let scale = data["scale"] as! CGFloat
+                self.scrollView?.setZoomScale(scale, animated: false)
+                if scale >= 1 {
+                    self.scrollView?.scrollEnabled = false
+                } else {
+                    self.scrollView?.scrollEnabled = true
+                }
+            }
+        }
+        
     }
     
     func getNextBox(page: Int) -> Dictionary<String, AnyObject>?{
@@ -576,9 +665,11 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         }
         if let url = NSURL(string: url.stringByReplacingOccurrencesOfString("10.0.2.2", withString: "127.0.0.1")){
             self.getDataFromUrl(url) { data in
-                if let image = UIImage(data: data!){
-                    self.preLoadedImages[document][page] = image
-                    completion?(result: image)
+                if nil != data{
+                    if let image = UIImage(data: data!){
+                        self.preLoadedImages[document][page] = image
+                        completion?(result: image)
+                    }
                 }
             }
         }

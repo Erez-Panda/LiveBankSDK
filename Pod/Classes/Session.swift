@@ -47,6 +47,13 @@ class Session {
         })
     }
     
+    func disconnect(){
+        socket?.disconnect()
+        socket = nil
+        currentCall = nil
+        callbacks = [:]
+    }
+    
     func sendMessage(type: String, data: Dictionary<String, AnyObject>){
         var message = data
         message["_type"] = type

@@ -14,7 +14,9 @@ class RemoteAPI {
     //private let SERVER_URL = "http://10.0.0.4:8000"
     //private let SERVER_URL = "http://172.20.11.86:8000"
     //private let SERVER_URL = "http://127.0.0.1:8000"
-    private let SERVER_URL = "http://172.20.9.32:8000"
+    //private let SERVER_URL = "http://172.20.9.243:8000"
+    //private let SERVER_URL = "http://livemed-front-dev.elasticbeanstalk.com"
+    private let SERVER_URL: String
     private var token = ""
     static let sharedInstance = RemoteAPI()
     
@@ -28,6 +30,13 @@ class RemoteAPI {
     
     
     init() {
+        print("hello")
+        
+        if let url = NSBundle.mainBundle().infoDictionary?["LiveMedURL"] as? String{
+            SERVER_URL = url
+        } else {
+            SERVER_URL = "http://127.0.0.1:8000"
+        }
         
     }
     
@@ -72,11 +81,6 @@ class RemoteAPI {
         })
     }
     
-    func newPartialDocument(data: Dictionary<String, AnyObject>, completion: (result: Dictionary<String, AnyObject>) -> Void) -> Void{
-        self.http("/sign-documents/partial/", message: data, method: .POST, completion: {result -> Void in
-            completion(result: self.getDictionaryResult(result))
-        })
-    }
     
     func connectToSocket(data: Dictionary<String, AnyObject>, completion: (result: Dictionary<String, AnyObject>) -> Void) -> Void{
         self.http("/sockets/connect/", message: data, method: .POST, completion: {result -> Void in
@@ -93,12 +97,6 @@ class RemoteAPI {
     func getMessagesFromSocket(data: Dictionary<String, AnyObject>, completion: (result: Array<Dictionary<String, AnyObject>>) -> Void) -> Void{
         self.http("/sockets/messages/", message: data, completion: {result -> Void in
             completion(result: self.getArrayResult(result))
-        })
-    }
-    
-    func newModification(data: Dictionary<String, AnyObject>, completion: (result: Dictionary<String, AnyObject>) -> Void) -> Void{
-        self.http("/sign-documents/modifications/", message: data, method: .POST, completion: {result -> Void in
-            completion(result: self.getDictionaryResult(result))
         })
     }
     
@@ -160,10 +158,10 @@ class RemoteAPI {
         
         switch method{
         case .POST:
-            manager.POST(requestUrl, parameters: message, success: getResponseHandler(completion),failure: getErrorHandler(completion))
+            manager.POST(requestUrl, parameters: message, progress: nil, success: getResponseHandler(completion), failure: getErrorHandler(completion))
             break
         case .GET:
-            manager.GET(requestUrl, parameters: message, success: getResponseHandler(completion),failure: getErrorHandler(completion))
+            manager.GET(requestUrl, parameters: message, progress: nil, success: getResponseHandler(completion),failure: getErrorHandler(completion))
             break
         case .PATCH:
             manager.PATCH(requestUrl, parameters: message, success: getResponseHandler(completion),failure: getErrorHandler(completion))

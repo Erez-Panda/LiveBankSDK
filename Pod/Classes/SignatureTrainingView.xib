@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -13,58 +13,45 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אנא חתום באיזור המסומן" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-hY-a2a">
-                    <rect key="frame" x="217" y="30" width="165.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN2-mU-TLt">
-                    <rect key="frame" x="8" y="520" width="295.5" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="sgi-Sw-mrm"/>
-                    </constraints>
-                    <state key="normal" title="אשר"/>
-                    <connections>
-                        <action selector="onOkTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="GJe-dR-5Pq"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-8u-cwf">
-                    <rect key="frame" x="304" y="520" width="295.5" height="80"/>
-                    <state key="normal" title="בטל"/>
-                    <connections>
-                        <action selector="onCancelTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="9xj-Tr-N1F"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-uO-noD">
-                    <rect key="frame" x="75" y="180" width="450" height="240"/>
+                    <rect key="frame" x="60" y="172" width="480" height="256"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Caq-uO-noD" secondAttribute="height" multiplier="15:8" id="Mao-Sq-f37"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb8-5t-LBk" userLabel="Close" customClass="NIKFontAwesomeButton">
+                    <rect key="frame" x="540" y="132" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="fpY-Be-2VE"/>
+                        <constraint firstAttribute="height" constant="40" id="mpK-Al-mLt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconHex" value="f00d"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.4039215686" green="0.79215686269999996" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="size">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onCancelTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Ao-NA-cM6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Caq-uO-noD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1R2-Xd-CmE"/>
-                <constraint firstItem="VxA-hY-a2a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Ej-mp-ltp"/>
-                <constraint firstItem="VxA-hY-a2a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="4Ri-XX-MmO"/>
-                <constraint firstItem="tN2-mU-TLt" firstAttribute="height" secondItem="fjk-8u-cwf" secondAttribute="height" id="B3E-hd-Y0W"/>
-                <constraint firstItem="fjk-8u-cwf" firstAttribute="top" secondItem="tN2-mU-TLt" secondAttribute="bottom" constant="-63" id="EYe-fY-27c"/>
-                <constraint firstItem="tN2-mU-TLt" firstAttribute="width" secondItem="fjk-8u-cwf" secondAttribute="width" id="Le9-2s-1Vz"/>
-                <constraint firstItem="Caq-uO-noD" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3:4" id="UZo-TX-xKg"/>
-                <constraint firstItem="fjk-8u-cwf" firstAttribute="centerY" secondItem="tN2-mU-TLt" secondAttribute="centerY" id="X4h-zZ-3OT"/>
-                <constraint firstAttribute="trailing" secondItem="fjk-8u-cwf" secondAttribute="trailing" id="Xfd-mo-8bz"/>
-                <constraint firstAttribute="bottom" secondItem="tN2-mU-TLt" secondAttribute="bottom" id="eQz-kd-FMZ"/>
+                <constraint firstItem="Gb8-5t-LBk" firstAttribute="leading" secondItem="Caq-uO-noD" secondAttribute="trailing" id="Nkt-8H-ijt"/>
+                <constraint firstItem="Caq-uO-noD" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="4:5" id="UZo-TX-xKg"/>
                 <constraint firstItem="Caq-uO-noD" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="2:5" id="i9k-JV-HpN"/>
-                <constraint firstItem="fjk-8u-cwf" firstAttribute="leading" secondItem="tN2-mU-TLt" secondAttribute="trailing" constant="1" id="rjB-dT-PGL"/>
+                <constraint firstItem="Caq-uO-noD" firstAttribute="top" secondItem="Gb8-5t-LBk" secondAttribute="bottom" id="ruQ-Nl-1lY"/>
                 <constraint firstItem="Caq-uO-noD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tMV-8E-iOH"/>
-                <constraint firstItem="tN2-mU-TLt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="uRy-cF-WjF"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="i9k-JV-HpN"/>
-                    <exclude reference="EYe-fY-27c"/>
                 </mask>
             </variation>
             <connections>

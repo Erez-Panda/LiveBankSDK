@@ -80,6 +80,12 @@ class Socket: NSObject {
         }
     }
     
+    func disconnect(){
+        timer?.invalidate()
+        socket = nil
+        callbacks = []
+    }
+    
     func sendMessage(message: Dictionary<String, AnyObject>){
         if nil != socket {
             RemoteAPI.sharedInstance.sendMessageToSocket(["sender": sender, "socket": socket!, "data": message]) { (result) -> Void in

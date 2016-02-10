@@ -13,6 +13,7 @@ class SignDocumentPanelView: UIView {
     var onSign: ((signatureView: LinearInterpView, origin: CGPoint) -> ())?
     var onClose: ((sender: UIView) -> ())?
 
+    @IBOutlet weak var signLabel: UILabel!
     @IBOutlet weak var watingLabel: UILabel!
     @IBOutlet weak var buttonleadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonTrailingConstraint: NSLayoutConstraint!
@@ -26,16 +27,30 @@ class SignDocumentPanelView: UIView {
     */
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 8
+        //self.layer.cornerRadius = 8
         self.layer.borderColor = SignColors.sharedInstance.buttonColor().CGColor
-        self.layer.borderWidth = 1
-        self.clipsToBounds = true
+        self.layer.borderWidth = 2
+        //self.clipsToBounds = true
         self.signView.blockTouches = true
     }
     
     func attachToView(view: UIView){
         view.addSubview(self)
         self.addConstraintsToSuperview(view, top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func clean(){
+        signView.cleanView()
+    }
+    
+    func disable(){
+        watingLabel.hidden = false
+        signLabel.hidden = true
+        self.userInteractionEnabled = false
+    }
+    
+    func isEmpty() -> Bool{
+        return signView.points.count == 0
     }
 
     @IBAction func sign(sender: AnyObject) {

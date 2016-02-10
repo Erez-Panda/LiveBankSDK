@@ -16,6 +16,7 @@ class ControlPanelView: UIView {
     var onLeft: (() -> Void)?
     var onRight: (() -> Void)?
     var onSign: (() -> Void)?
+    var onClose: (() -> Void)?
     
     
     func addGradientLayer(topColor: UIColor, bottomColor: UIColor) -> CAGradientLayer{
@@ -80,6 +81,9 @@ class ControlPanelView: UIView {
     }
     
     
+    @IBAction func onClose(sender: AnyObject) {
+        onClose?()
+    }
     override func awakeFromNib() {
     
     }
