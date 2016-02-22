@@ -53,7 +53,7 @@ class Socket: NSObject {
                             callback(message: data)
                         }
                     } else {
-                        print(message["data"])
+                        //print(message["data"])
                     }
                     
                 }

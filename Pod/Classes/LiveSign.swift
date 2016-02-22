@@ -12,6 +12,12 @@ public class LiveSign: NSObject {
     
     public static let sharedInstance = LiveSign()
     
+    public func setRemoteUrl(strUrl: String) -> Bool {
+        // TODO: check if url is valid
+        RemoteAPI.sharedInstance.setUrl(strUrl)
+        return true
+    }
+    
     public func startSession(id: String, superView: UIView, user: String? = nil, completion: ((view: UIView) -> Void)? = nil) -> Void{
         Session.sharedInstance.connect(id) { (result) -> Void in
             let documentView = NSBundle(forClass: LiveSign.self).loadNibNamed("DocumentView", owner: self, options: nil)[0] as! DocumentView

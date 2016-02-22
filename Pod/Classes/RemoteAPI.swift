@@ -16,7 +16,7 @@ class RemoteAPI {
     //private let SERVER_URL = "http://127.0.0.1:8000"
     //private let SERVER_URL = "http://172.20.9.243:8000"
     //private let SERVER_URL = "http://livemed-front-dev.elasticbeanstalk.com"
-    private let SERVER_URL: String
+    private var SERVER_URL: String
     private var token = ""
     static let sharedInstance = RemoteAPI()
     
@@ -30,14 +30,16 @@ class RemoteAPI {
     
     
     init() {
-        print("hello")
-        
         if let url = NSBundle.mainBundle().infoDictionary?["LiveMedURL"] as? String{
             SERVER_URL = url
         } else {
             SERVER_URL = "http://127.0.0.1:8000"
         }
         
+    }
+    
+    func setUrl(strUrl:String){
+        SERVER_URL = strUrl
     }
     
     private func getArrayResult(result: AnyObject) ->Array<Dictionary<String, AnyObject>> {
@@ -136,7 +138,7 @@ class RemoteAPI {
         return {(operation: NSURLSessionDataTask?, error: NSError) in
             completion(result: false)
             self.printError(error)
-            print("Error: " + error.localizedDescription)
+            //print("Error: " + error.localizedDescription)
         }
     }
     
@@ -144,7 +146,7 @@ class RemoteAPI {
         if let info = error.userInfo as? Dictionary<String, AnyObject>{
             if let data = info["com.alamofire.serialization.response.error.data"] as? NSData{
                 if let res = NSString(data: data, encoding: NSUTF8StringEncoding){
-                    print(res)
+                    //print(res)
                     res.stringByReplacingOccurrencesOfString("\"", withString: "", options: [], range: NSMakeRange(0,res.length))
                 } else {
                 }

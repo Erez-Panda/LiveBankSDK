@@ -133,7 +133,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
             "document_id": self.currentDocument!,
             "tracking": randomAlphaNumericString(6),
             "type": "signature",
-            "tag": self.signatureBoxes[currentPage!]![currentBox!]["type"] as! String + "-signed"
+            "tag": self.signatureBoxes[currentPage!]![currentBox!]["data"] as! String
         ] as Dictionary<String, AnyObject>
 //        var pointsStr = "width=\()&height=\(signatureView.frame.height)&originX=\(origin.x/imgSize.width)&originY=\(origin.y/imgSize.height)&screenWidth=\(imgSize.width/scaleRatio)&screenHeight=\(imgSize.height/scaleRatio)&zoom=\(zoom)&points="
         var pointsStr = ""
@@ -564,8 +564,12 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         }
         
         Session.sharedInstance.onMessage("open_next_box") { (message) -> Void in
-            if nil != message{
-                self.signDocument(self.getNextBox())
+            if let data = message{
+                if let box = self.getNextBox(data["guid"] as? String){
+                    self.signDocument(box)
+                } else {
+                    Session.sharedInstance.sendMessage("open_next_box", data: ["error": "No available signatures"])
+                }
             }
         }
         
@@ -585,11 +589,11 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
                 if let success = data["success"] as? Bool{
                     if success{
                         self.addSignatureToImage()
-                        self.signDocument(self.getNextBox())
+                        //self.signDocument(self.getNextBox())
                     } else{
                         if nil != data["retry"] as? Bool{
                             self.closeOpenPanels()
-                            self.signDocument(self.getNextBox())
+                            self.signDocument(self.signatureBoxes[self.currentPage!]?[self.currentBox!])
                         } else {
                             self.closeOpenPanels()
                             self.scrollView?.setZoomScale(1, animated: false)
@@ -603,7 +607,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         Session.sharedInstance.onMessage("duplicate_boxs") { (message) -> Void in
             if nil != message{
                 self.duplicateBoxes()
-                self.signDocument(self.getNextBox())
+                //self.signDocument(self.getNextBox())
             }
         }
         
@@ -631,10 +635,16 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         
     }
     
-    func getNextBox(page: Int) -> Dictionary<String, AnyObject>?{
+    func getNextBox(page: Int, data:String? = nil) -> Dictionary<String, AnyObject>?{
         if nil != self.signatureBoxes[page]{
             for index in 0..<self.signatureBoxes[page]!.count{
-                if !(self.signatureBoxes[page]![index]["type"] as! String).containsString("-signed"){
+                if nil != data && data != ""{
+                    if (self.signatureBoxes[page]![index]["data"] as! String).containsString(data!){
+                        currentBox = index
+                        return self.signatureBoxes[page]![index]
+                    }
+                }
+                if data == "" && !(self.signatureBoxes[page]![index]["type"] as! String).containsString("-signed"){
                     currentBox = index
                     return self.signatureBoxes[page]![index]
                 }
@@ -644,10 +654,11 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         return nil
     }
     
-    func getNextBox() -> Dictionary<String, AnyObject>?{
+    
+    func getNextBox(data:String? = nil) -> Dictionary<String, AnyObject>?{
         var index = 0
         while index < preLoadedImages.count{
-            let box = getNextBox(index)
+            let box = getNextBox(index, data: data)
             if nil != box {
                 selectPage(index)
                 return box
