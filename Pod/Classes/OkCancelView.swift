@@ -11,13 +11,16 @@ import UIKit
 class OkCancelView: UIView {
     
     var onOk: (() -> Void)?
-    var onCacnel: (() -> Void)?
+    var onCancel: (() -> Void)?
     var onClean: (() -> Void)?
 
-    @IBAction func cancel(sender: AnyObject) {
+    @IBAction func clean(sender: AnyObject) {
         //self.removeFromSuperview()
         //onCacnel?()
         onClean?()
+    }
+    @IBAction func cancel(sender: AnyObject) {
+        onCancel?()
     }
 
     @IBAction func ok(sender: AnyObject) {

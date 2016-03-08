@@ -14,7 +14,7 @@ class Socket: NSObject {
     private let sender: String
     private var socket: Int?
     private var timer: NSTimer?
-    private let DEFAULT_INTERVAL = 1
+    private let DEFAULT_INTERVAL = 3
     private var callbacks : Array<((message: Dictionary<String, AnyObject>) -> Void)> = []
     
     init(fromString name: NSString) {

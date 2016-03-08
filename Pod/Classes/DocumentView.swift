@@ -351,6 +351,11 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         
     }
     
+    func onPanelCancel(){
+        closeOpenPanels()
+        Session.sharedInstance.sendMessage("box_closed", data: ["error": "User canceled signature"])
+    }
+    
     func onPanelClean(){
         signView?.clean()
     }
@@ -367,6 +372,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
             okPanelView = NSBundle(forClass: LiveSign.self).loadNibNamed("OkCancelView", owner: self, options: nil)[0] as? OkCancelView
             okPanelView?.onClean = onPanelClean
             okPanelView?.onOk = onPanelOk
+            okPanelView?.onCancel = onPanelCancel
             okPanelView?.attachToView(signView!, superView: self)
         }
     }
@@ -474,29 +480,9 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         }
     }
     
-    func duplicateBoxes(){
-        for (page, boxes) in self.signatureBoxes{
-            var newBoxes: Array<Dictionary<String, AnyObject>> = []
-            for box in boxes{
-                var newBox:Dictionary<String, AnyObject> = box
-                if nil == box["duplicated"]{
-                    newBox["duplicated"] = true
-                    if nil != box["originaltype"]{
-                        newBox["type"] = box["originaltype"]
-                    } else {
-                        newBox["type"] = box["type"] as! String + "-duplicated"
-                    }
-                    if let left = box["left"] as? CGFloat{
-                        if left < 0.5 {
-                            newBox["left"] = left + (box["width"] as! CGFloat)
-                        } else {
-                            newBox["left"] = left - (box["width"] as! CGFloat)
-                        }
-                    }
-                newBoxes.append(newBox)
-                }
-            }
-            self.signatureBoxes[page]?.appendContentsOf(newBoxes)
+    func duplicateBoxes(pagesMetaData: Array<Array<Dictionary<String, AnyObject>>>){
+        for i in 0..<pagesMetaData.count{
+            self.signatureBoxes[i] = pagesMetaData[i]
         }
     }
     
@@ -604,9 +590,9 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
             }
         }
         
-        Session.sharedInstance.onMessage("duplicate_boxs") { (message) -> Void in
-            if nil != message{
-                self.duplicateBoxes()
+        Session.sharedInstance.onMessage("duplicate_boxes") { (message) -> Void in
+            if let boxes = message?["boxes"] as? Array<Array<Dictionary<String, AnyObject>>>{
+                self.duplicateBoxes(boxes)
                 //self.signDocument(self.getNextBox())
             }
         }
@@ -631,6 +617,10 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
                     self.scrollView?.scrollEnabled = true
                 }
             }
+        }
+        
+        Session.sharedInstance.onMessage("close_session") { (message) -> Void in
+            self.closeView()
         }
         
     }
