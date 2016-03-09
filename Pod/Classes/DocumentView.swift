@@ -399,6 +399,10 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         self.signDocument(self.getNextBox())
     }
     
+    func requestNextBox(){
+        Session.sharedInstance.sendMessage("request_next_box", data: [:])
+    }
+    
     func closeView(){
         self.fadeOut(duration: 0.325, remove: true)
         Session.sharedInstance.disconnect()
@@ -408,7 +412,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
         controlPanelView = NSBundle(forClass: LiveSign.self).loadNibNamed("ControlPanelView", owner: self, options: nil)[0] as? ControlPanelView
         controlPanelView?.onLeft = swipeRight
         controlPanelView?.onRight = swipeLeft
-        controlPanelView?.onSign = openNextBox
+        controlPanelView?.onSign = requestNextBox
         controlPanelView?.onClose = closeView
         controlPanelView?.attachToView(self)
         controlPanelTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: Selector("hideControlPanel"), userInfo: AnyObject?(), repeats: false)

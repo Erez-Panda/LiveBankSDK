@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LiveSignSDK"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "Add signing abilities to your app"
 
   s.description      = <<-DESC
