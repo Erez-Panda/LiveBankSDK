@@ -465,6 +465,7 @@ class DocumentView: UIView, UIGestureRecognizerDelegate, UIScrollViewDelegate{
     
     func selectPage(index: Int){
         if (index != self.currentPage){
+            Session.sharedInstance.sendMessage("page_changed", data: ["index": index])
             self.signedImageView?.removeFromSuperview()
             self.signedImageView = nil
             self.scrollView?.setZoomScale(1.0, animated: false)
