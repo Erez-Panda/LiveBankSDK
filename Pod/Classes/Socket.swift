@@ -53,6 +53,9 @@ class Socket: NSObject {
                             callback(message: data)
                         }
                     } else {
+                        if let data = message["data"] as? Dictionary<String, AnyObject>{
+                            callback(message: data)
+                        }
                         //print(message["data"])
                     }
                     
